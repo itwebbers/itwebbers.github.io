@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="万丈红尘三杯酒，千秋大业一壶茶。">
+<meta name="keywords" content="itwebbers web 前端">
+<meta property="og:type" content="website">
+<meta property="og:title" content="itwebbers">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="itwebbers">
+<meta property="og:description" content="万丈红尘三杯酒，千秋大业一壶茶。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="itwebbers">
+<meta name="twitter:description" content="万丈红尘三杯酒，千秋大业一壶茶。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+
+
+  <title>itwebbers</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">itwebbers</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">德心孤，必有邻；心怀志，定创业！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/2018-12-25-vue之 scoped css/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/25/2018-12-25-vue之 scoped css/" itemprop="url">vue之scoped css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T00:00:00+08:00">
+                2018-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vuejs/" itemprop="url" rel="index">
+                    <span itemprop="name">Vuejs</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Scoped-CSS-详解"><a href="#Scoped-CSS-详解" class="headerlink" title="Scoped CSS 详解"></a>Scoped CSS 详解</h1><blockquote>
+<p>当<code>&lt;style&gt;</code>标签有<code>scoped</code>属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">.example &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;example&quot;&gt;hi&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="子组件的根元素"><a href="#子组件的根元素" class="headerlink" title="子组件的根元素"></a>子组件的根元素</h2><blockquote>
+<p>使用<code>scoped</code>后，父组件的样式将不会渗透到子组件中。不过一个子组件的根节点会同时受其父组件的 scoped CSS 和子组件 scoped CSS 的影响。这样涉及是为了让父组件可以从布局的角度出发，调整其子组件根元素的样式。</p>
+</blockquote>
+<h2 id="深度作用选择器"><a href="#深度作用选择器" class="headerlink" title="深度作用选择器"></a>深度作用选择器</h2><blockquote>
+<p>如果你希望<code>scoped</code>样式中的一个选择器能够作用得更深，例如影响子组件，你可以使用 <code>&gt;&gt;&gt;</code> 操作符：</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span> <span class="selector-tag">scoped</span>&gt;</span><br><span class="line">  <span class="selector-class">.a</span> &gt;&gt;&gt; <span class="selector-class">.b</span> &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上述的代码会被编译成：</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span><span class="selector-attr">[data-v-f3f3eg9]</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<font color="red">有些像 Sass 之类的预处理器无法正确解析 <code>&gt;&gt;&gt;</code>。这种情况下你可以使用<code>/deep/</code> 操作符取而代之这个<code>&gt;&gt;&gt;</code>的别名，同样可以正常工作</font>
+</blockquote>
+<h2 id="动态生成的内容"><a href="#动态生成的内容" class="headerlink" title="动态生成的内容"></a>动态生成的内容</h2><blockquote>
+<p>通过<code>v-html</code>创建的 DOM 内容不受 Scoped 样式影响，但是你仍然可以通过深度作用选择器来为他们设置样式。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-计算机组成原理/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-计算机组成原理/" itemprop="url">计算机组成原理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><blockquote>
+<p><a href="https://blog.csdn.net/Adjerrekaf/article/details/78880089" target="_blank" rel="noopener">https://blog.csdn.net/Adjerrekaf/article/details/78880089</a></p>
+</blockquote>
+<ul>
+<li><p>计算机系统组成？</p>
+<ul>
+<li>软件</li>
+<li>硬件</li>
+</ul>
+</li>
+<li><p>计算机系统 5 层层次结构从下到上？</p>
+<blockquote>
+<p>微程序机器 —-&gt; 传统机器 —–&gt; 操作系统机器 ——&gt; 汇编语言机器 —-&gt; 高级语言机器<br>——-微程序机器和传统机器是物理机， 其他的都是虚拟机</p>
+</blockquote>
+</li>
+<li><p>在计算机系统结构中，什么是解释，什么是翻译？</p>
+<ul>
+<li>翻译： 将一种语言编写的程序全部翻译程另外一种语言，然后执行</li>
+<li>解释： 将一种语言编写的程序一条语句翻译成另一种语言的一条或者多条语句，然后执行，执行完这条语句后，然后再解释下一句；</li>
+</ul>
+</li>
+<li><p>电子计算机的基本结构形式：</p>
+<ul>
+<li>冯诺伊曼机： 运算器 + 控制器 + 存储器 + 输入设备 + 输出设备</li>
+<li>特征： 数字计算机的机制采用二进制；计算机应该按照程序顺序执行；</li>
+</ul>
+</li>
+<li><p>什么是存储单元，存储字，存储子长，存储体？</p>
+<ul>
+<li>存储单元： 存储一个存储字并具有特定存储地址的存储单位</li>
+<li>存储字：一个存储单元中存放的所有二进制数据，按照某个地址访问某个存储单元获取的二进制数据</li>
+<li>存储字长：存储字中二进制的位数，即按照某个地址访问某个存储单元获取的二进制数据的位数；</li>
+<li>由多个存储单元构成的存储器件</li>
+</ul>
+</li>
+<li><p>主存储器中，什么是 MAR，什么是 MDR，存储器的最大容量由什么决定？</p>
+<ul>
+<li>MAR： 存储地址寄存器，保存需要访问的存储单元地址。反应存储单元的个数</li>
+<li>MDR： 存储数据寄存器，缓存读出/写入存储单元的数据。反应存储字长<br>-</li>
+</ul>
+</li>
+<li><p>什么是机器字长，什么是存储字长？</p>
+<ul>
+<li>机器字长：CPU 一次能够处理的二进制数据的位数</li>
+<li>存储字长：按照某个地方访问某个存储单元获取的二进制数据的位数</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-三栏布局/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-三栏布局/" itemprop="url">三栏布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="三栏布局"><a href="#三栏布局" class="headerlink" title="三栏布局"></a>三栏布局</h1><ul>
+<li><p>假设高度已知，请写出三栏布局，其中左右栏各 300px，中间自适应</p>
+<ol>
+<li><p>浮动 双飞翼布局/圣杯布局</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">"viewport"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>圣杯布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      .container &#123;</span></span><br><span class="line"><span class="undefined">        overflow: hidden;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .center &#123;</span></span><br><span class="line"><span class="undefined">        width: 100%;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left,</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">        float: left;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: black;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">        float: right;</span></span><br><span class="line"><span class="undefined">        margin-left: -200px;</span></span><br><span class="line"><span class="undefined">        background-color: brown;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定位</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">"viewport"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>双飞翼布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      .container &#123;</span></span><br><span class="line"><span class="undefined">          overflow: hidden;</span></span><br><span class="line"><span class="undefined">          position: relative;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .center &#123;</span></span><br><span class="line"><span class="undefined">          width: 100%;</span></span><br><span class="line"><span class="undefined">          height: 300px;</span></span><br><span class="line"><span class="undefined">          background-color: red;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left, .right &#123;</span></span><br><span class="line"><span class="undefined">          width: 200px;</span></span><br><span class="line"><span class="undefined">          height: 300px;</span></span><br><span class="line"><span class="undefined">          position: absolute;</span></span><br><span class="line"><span class="undefined">          top: 0;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left &#123;</span></span><br><span class="line"><span class="undefined">          left: 0;</span></span><br><span class="line"><span class="undefined">          background-color: aqua</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">          right: 0;</span></span><br><span class="line"><span class="undefined">          background-color: blue</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex 布局</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      .container &#123;</span></span><br><span class="line"><span class="undefined">        display: flex;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .center &#123;</span></span><br><span class="line"><span class="undefined">        flex: 1;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left,</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        background-color: lawngreen;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>4.table 布局</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>table布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      .container &#123;</span></span><br><span class="line"><span class="undefined">        display: table;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .center &#123;</span></span><br><span class="line"><span class="undefined">        display: table-cell;</span></span><br><span class="line"><span class="undefined">        width: 100%;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: yellow;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left,</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: brown;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>5.网格布局 Grid</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Grid网格布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      .container &#123;</span></span><br><span class="line"><span class="undefined">        display: grid;</span></span><br><span class="line"><span class="undefined">        grid-template-columns: 200px auto 200px;</span></span><br><span class="line"><span class="undefined">        grid-template-rows: 300px;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .center &#123;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      .left,</span></span><br><span class="line"><span class="undefined">      .right &#123;</span></span><br><span class="line"><span class="undefined">        background-color: brown;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-vue the life/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-vue the life/" itemprop="url">vue生命周期详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vuejs/" itemprop="url" rel="index">
+                    <span itemprop="name">Vuejs</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vue2-0-生命周期详解"><a href="#vue2-0-生命周期详解" class="headerlink" title="vue2.0 生命周期详解"></a>vue2.0 生命周期详解</h1><blockquote>
+<p><a href="https://segmentfault.com/a/1190000008010666" target="_blank" rel="noopener">参考链接</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">阶段</th>
+<th style="text-align:center">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">beforeCreate</td>
+<td style="text-align:center">el 和 data 并未初始化</td>
+</tr>
+<tr>
+<td style="text-align:center">created</td>
+<td style="text-align:center">完成了 data 数据初始化，但是 el 并没有</td>
+</tr>
+<tr>
+<td style="text-align:center">beforeMount</td>
+<td style="text-align:center">完成了 el 和 data 数据初始化</td>
+</tr>
+<tr>
+<td style="text-align:center">mounted</td>
+<td style="text-align:center">完成挂载</td>
+</tr>
+<tr>
+<td style="text-align:center">beforeUpdate</td>
+<td style="text-align:center">data 变化时会被触发</td>
+</tr>
+<tr>
+<td style="text-align:center">updated</td>
+<td style="text-align:center">data 变化时会被触发</td>
+</tr>
+<tr>
+<td style="text-align:center">beforeDestroy</td>
+<td style="text-align:center">实例销毁前调用，依然可以使用</td>
+</tr>
+<tr>
+<td style="text-align:center">destroyed</td>
+<td style="text-align:center">对 data 的方法不会再出发周期函数，说明此时 vue 实例已经接触了事件监听和 dom 的绑定，但是 dom 依然存在</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://juejin.im/post/5ad10800f265da23826e681e" target="_blank" rel="noopener">参考链接</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-ES6 REST/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-ES6 REST/" itemprop="url">ES6...rest和三点扩展运算符</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ES6-的-rest-参数和扩展运算符"><a href="#ES6-的-rest-参数和扩展运算符" class="headerlink" title="ES6 的 rest 参数和扩展运算符"></a>ES6 的 rest 参数和扩展运算符</h1><h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><ul>
+<li>含义<blockquote>
+<p>扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>, ...[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>);    <span class="comment">// 1,2,3,4,5</span></span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(<span class="string">'all'</span>)]   <span class="comment">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>扩展运算符主要是结合普通函数使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通函数一起使用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a, b, c, d, e</span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> args = [<span class="number">0</span>, <span class="number">2</span>]</span><br><span class="line">fun(<span class="number">-1</span>, ...args, <span class="number">2</span>, ...[<span class="number">3</span>])</span><br><span class="line"><span class="comment">// 扩展运算符后面还可以放置表达式</span></span><br><span class="line">cosnt arr = [</span><br><span class="line">    ...(x &gt; <span class="number">0</span> ? [<span class="string">'x'</span>] : []), <span class="string">'y'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>替代函数的 apply 方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 是写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">x, y, z</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">fun.apply(<span class="literal">null</span>, args)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 的写法</span></span><br><span class="line"><span class="keyword">let</span> args = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">fun(...args)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>合并或者连接数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替push方法</span></span><br><span class="line">arr1.push(...arr2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替concat方法</span></span><br><span class="line">[...arr1, ...arr2]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>复制数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 将arr1复制给arr2</span></span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解构赋值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line"><span class="keyword">let</span> x = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">let</span> restArr = arr.slice(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">let</span> [x, ...restArr] = arr;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字符串转化成数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'Hello World'</span></span><br><span class="line"><span class="keyword">const</span> arr = [...str]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类数组转数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nodeList = <span class="built_in">document</span>.querySelect(<span class="string">'div'</span>)</span><br><span class="line"><span class="keyword">let</span> nodeArr = [...nodeList]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 只可以将可以枚举的类数组对象转换成数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>map 和 Set 结构</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-css盒模型/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-css盒模型/" itemprop="url">css 盒模型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="css-盒模型"><a href="#css-盒模型" class="headerlink" title="css 盒模型"></a>css 盒模型</h1><p>…</p>
+<ol>
+<li>基本概念<blockquote>
+<p>css 盒模型(Box Model)规定了元素框处理元素的内容，边框，内边距，外边距的方式。</p>
+</blockquote>
+</li>
+<li>W3C 标准模型和 IE 盒模型<blockquote>
+<p>W3C 标准盒模型：属性 width 和 height 只包含 content，不包含 border 和 padding<br>IE 盒模型：属性 width 和 height 包含 content+padding+border</p>
+</blockquote>
+</li>
+<li>css 如何设置这两种模型<blockquote>
+<p>ie8+浏览器中的盒模型可以由 box-sizing 进行自由切换<br>centent-box 标准盒模型，border-box IE 盒模型</p>
+</blockquote>
+</li>
+<li><p>js 如何设置获取盒模型对应的宽和高</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>js如何获取css盒模型的宽和高<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      * &#123;</span></span><br><span class="line"><span class="undefined">        margin: 0;</span></span><br><span class="line"><span class="undefined">        padding: 0;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">      #box &#123;</span></span><br><span class="line"><span class="undefined">        width: 100px;</span></span><br><span class="line"><span class="undefined">        height: 100px;</span></span><br><span class="line"><span class="undefined">        padding: 50px;</span></span><br><span class="line"><span class="undefined">        border: 5px solid red;</span></span><br><span class="line"><span class="undefined">        margin: 50px;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span> <span class="attr">style</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>)</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 只能取到内联样式的宽高</span></span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'style:'</span> + box.style.width) <span class="comment">// 100px</span></span></span><br><span class="line"><span class="javascript">      <span class="comment">// 内联样式和外联样式的宽高都能取到，但只有 IE 支持</span></span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'currentStyle:'</span> + box.currentStyle.width) <span class="comment">// 100px</span></span></span><br><span class="line"><span class="javascript">      <span class="comment">// 内联样式和外联样式的宽高都能取到，几乎所有主流浏览器都支持</span></span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'getComputedStyle:'</span> + getComputedStyle(box).width) <span class="comment">// 100px</span></span></span><br><span class="line"><span class="javascript">      <span class="comment">// 内联样式和外联样式的宽高都能取到，几乎所有主流浏览器都支持，取到的是盒子总宽度</span></span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(</span></span><br><span class="line"><span class="javascript">        <span class="string">'getBoundingClientRect:'</span> + box.getBoundingClientRect().width</span></span><br><span class="line"><span class="javascript">      ) <span class="comment">// 210</span></span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据盒模型解释边距重叠</p>
+</li>
+<li>BFC(边距重叠解决方案)<br><code>BFC概念</code> ： 块级格式化上下文<br><code>如何创建BFC</code>：<br>_ float 的值不为 none<br>_ overflow 的值不为 visiable<br>_ display 的值为 inline-block，table-caption，table-cell<br>_ position 的值为 absolute，fixed<br><code>BFC作用</code>：<br>_ 自适应两栏布局<br>_ 可以阻止元素被浮动元素覆盖<br>_ 可以包含浮动元素，清除内部浮动<br>_ 分属于不同的 BFC 可以阻止 margin 重叠<br><code>BFC的原理</code>：<br>_ 属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠<br>_ BFC 的区域不会与 float box 重叠<br>_ BFC 在页面上是一个独立的容器.<br>_ ji 算 BFC 的高度时间，浮动元素也要跟着计算</li>
+</ol>
+<p>…</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-Array design/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-10-Array design/" itemprop="url">Array 数据相关处理方式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数组相关"><a href="#数组相关" class="headerlink" title="数组相关"></a>数组相关</h1><blockquote>
+<p>数据去重，排序等等处理方式</p>
+</blockquote>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><ul>
+<li>filter</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.filter(<span class="function"><span class="keyword">function</span>(<span class="params">val, index, arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.indexOf(val) === index;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ES6</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 标准实现方法</span></span><br><span class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  扩展运算符</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>reduce</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = arr.sort().reduce(<span class="function">(<span class="params">init, current</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(init.length === <span class="number">0</span> || init[init.length - <span class="number">1</span>] != current)&#123;</span><br><span class="line">        init.push(current);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> init;</span><br><span class="line">&#125;, [])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>push</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tempArray = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(tempArrray[i].indexOf(arr[i] === <span class="number">-1</span>))&#123;</span><br><span class="line">            tempArray.push(aarr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;(i))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>排序去除相邻的重复元素</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortArray = arr.sort()</span><br><span class="line"><span class="keyword">let</span> tempArray = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(sortArray[i] != sortArray[i+<span class="number">1</span>])&#123;</span><br><span class="line">        tempArray.push(sortArray[i])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>splice</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> len = arr.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] === arr[j]) &#123;</span><br><span class="line">            arr.splice(i,<span class="number">1</span>);</span><br><span class="line">            len--;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="判断是否是数组"><a href="#判断是否是数组" class="headerlink" title="判断是否是数组"></a>判断是否是数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript新增API isArray</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用原型链</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(arr).split(<span class="string">" "</span>)[<span class="number">1</span>].slice(<span class="number">0</span>, <span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="可枚举的对象转化成数组"><a href="#可枚举的对象转化成数组" class="headerlink" title="可枚举的对象转化成数组"></a>可枚举的对象转化成数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(obj)</span><br><span class="line">[].slice.apply(obj, [<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype.slice.call(obj)</span><br><span class="line"><span class="built_in">Array</span>.prototype.slice.apply(obj, [<span class="number">0</span>])</span><br><span class="line"><span class="comment">// Array.prototype.push.apply(obj.arguments)</span></span><br><span class="line">[第五个方法参考资料](https:<span class="comment">//www.quora.com/How-does-Array-prototype-push-apply-work-in-JavaScript)</span></span><br></pre></td></tr></table></figure>
+<h2 id="数组对象排序"><a href="#数组对象排序" class="headerlink" title="数组对象排序"></a>数组对象排序</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sortBy = <span class="function"><span class="keyword">function</span>(<span class="params">attr, rev</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// attr 排序的属性，rev排序的方式</span></span><br><span class="line">    <span class="comment">// 如果第二个参数如果没有传，默认是升序排列</span></span><br><span class="line">    <span class="keyword">if</span>(rev == undefind)&#123;</span><br><span class="line">        rev = <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        rev = (rev) ? <span class="number">1</span> : <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">        a = a[attr];</span><br><span class="line">        b = b[attr];</span><br><span class="line">        <span class="keyword">if</span>(a &lt; b)&#123;</span><br><span class="line">            <span class="keyword">return</span> rev * <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a &gt; b) &#123;</span><br><span class="line">            <span class="keyword">return</span> rev * <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.sort(sortBy(<span class="string">"number"</span>, <span class="literal">false</span>))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/19/2018-12-17-what is the url/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/2018-12-17-what is the url/" itemprop="url">一个你说不上来的URL详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T00:00:00+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="url"><a href="#url" class="headerlink" title="url"></a>url</h1><blockquote>
+<p><code>统一资源定位符</code>（或程统一资源定位器/定位位置/URL 等）[Unifrom Reasource Locator, 缩写：URL]，有时也称作是网页地址（网址）。</p>
+</blockquote>
+<ol>
+<li>统一资源定位符的标准格式如下：<blockquote>
+<p><code>协议类型：[//[访问资源需要的凭证信息@]服务器地址[:端口号]][/资源层级UNIX文件]文件名[?查询][#片段ID]</code><br><a href="http://www.example.com:80/path/to/myfile.html?key1=value1&amp;key2=value2#SomewhereInTheDocument" target="_blank" rel="noopener">http://www.example.com:80/path/to/myfile.html?key1=value1&amp;key2=value2#SomewhereInTheDocument</a></p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>传输协议，例如 HTTP</li>
+<li>层级 URL 标记傅好（为[//],固定不改变）</li>
+<li>访问资源需要的凭证信息（可以省略）</li>
+<li>服务器（通常域名，有时间为 IP 地址）</li>
+<li>端口号（以数字的形式表示，若为 HTTP 默认，“:80”可以省略）</li>
+<li>路径（以’/‘字符区别路径中的每一个目录名称）</li>
+<li>参数： （GET 模式的窗体参数，以’？’字符为起点，每个参数以’&amp;’隔开，再以=分开参数名称与数据，通常以 UTF-8 的 URL 编码，避开字符冲突的问题）</li>
+<li>片段： 以#字符为起点是资源本身的另一部分的锚点. 锚点表示资源中的一种“书签”，给浏览器显示位于该“加书签”位置的内容的方向。例如，在 HTML 文档上，浏览器将滚动到定义锚点的位置;在视频或音频文档上，浏览器将尝试转到锚代表的时间。值得注意的是，＃后面的部分（也称为片段标识符）从来没有发送到请求的服务器。</li>
+</ul>
+<h5 id="linTo"><a href="#linTo" class="headerlink" title="linTo"></a>linTo</h5><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_is_a_URL" target="_blank" rel="noopener">什么是 URL？</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/19/2018-12-17-从输入URl到页面加载/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/2018-12-17-从输入URl到页面加载/" itemprop="url">在浏览器输入 URL 到页面加载发生了什么？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T00:00:00+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="在浏览器输入-URL-到页面加载发生了什么？"><a href="#在浏览器输入-URL-到页面加载发生了什么？" class="headerlink" title="在浏览器输入 URL 到页面加载发生了什么？"></a>在浏览器输入 URL 到页面加载发生了什么？</h1><p><code>过程综述：</code></p>
+<ol>
+<li>DNS 解析</li>
+<li>TCP 连接</li>
+<li>发送 HTTP 请求</li>
+<li>服务器处理请求并返回 HTTP 报文</li>
+<li>浏览器解析渲染页面</li>
+<li>连接结束</li>
+</ol>
+<h2 id="一-DNS-解析"><a href="#一-DNS-解析" class="headerlink" title="一. DNS 解析"></a>一. DNS 解析</h2><ol>
+<li><code>wiki</code>介绍:<blockquote>
+<p>域名系统（domain name system，缩写：DNS）是互联网的一项服务。它作为将域名和 ip 地址相互映射的一个分布式数据库，能够使人更方便的访问互联网。DNS 使用 TCP 和 UDP 端口 53.当前，对于每一级域名长度的限制是 63 个字符，域名总长度则不能朝服哦 253 个字符。<font color="red">最基本的作用就是将域名翻译成对应的 IP 地址</font></p>
+</blockquote>
+</li>
+<li><p>域名解析过程</p>
+<ul>
+<li>检查缓存<ol>
+<li>浏览器缓存<blockquote>
+<p>用户通过浏览器访问某域名时，浏览器首先会在自己的缓存中查找是否有该域名对用的 ip 地址（若曾经访问过，没有被清除，就会存在）</p>
+</blockquote>
+</li>
+<li>系统缓存<blockquote>
+<p>检查系统的 hosts 文件有没有这个域名的映射，如果有，直接返回</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>ISP（互联网服务提供商）DNS 缓存<blockquote>
+<p>如果 hosts 与本地的 DNS 解析器缓存都没有相应的网址映射关系，首先会找 TCP/IP 参数中设置的首选 DNS 服务器，在此我们叫它 DNS 服务器，此服务器收到查询时，如果要查询的域名，包含在本地配置区域资源中，则返回解析结果给客户机，完成域名解析，此解析具有权威性。</p>
+</blockquote>
+</li>
+<li>根域名服务器<blockquote>
+<p>当以上均未完成，则进入根服务器查询，全球仅有 13 台服务器，1 个根域名服务器，其余 12 台为辅助域名服务器。根域名收到请求后会查询域名文件记录，若无则将其管辖的顶级域名（如： .com）服务器 IP 告诉本地 DNS 服务器</p>
+</blockquote>
+</li>
+<li>顶级域名服务器<blockquote>
+<p>顶级域名服务器收到请求后查看区域文件记录，若无则将其管辖范围内主域名服务器 IP 地址告诉本地服务器</p>
+</blockquote>
+</li>
+<li>主域名服务器<blockquote>
+<p>主域名服务器接收到请求以后查询自己的缓存，如果没有则进入下一级域名服务器查找，并重复该步骤直至找到正确记录</p>
+</blockquote>
+</li>
+<li><p>保存结果到缓存</p>
+<blockquote>
+<p>本地域名服务器吧返回的结果保存到缓存</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="img/post-http/dns.jpg" alt="DNS"></p>
+<h2 id="二-TCP-链接"><a href="#二-TCP-链接" class="headerlink" title="二. TCP 链接"></a>二. TCP 链接</h2><ol>
+<li><p>第一次握手：CLient 将标识位 SYN 置为 1，随机产生一个值 seq=j，并将该数据包发送至 Server，Client 进入 SYN_SEND 状态，等待 Server 确认。</p>
+</li>
+<li><p>第二次握手：Server 收到数据包后由标志位 SYN=1 知道 Client 请求建立链接，Server 将标识位 SYN 和 ACK 都置为 1，ACK=j+1，随机产生一个值 seq=K，并将该数据包发送给 Client 以确认连接请求。</p>
+</li>
+<li><p>第三次握手：Client 收到确认后，检查 ACK 是否为 j+1，ACK 是否为 1，如果正确则将标志位 ACK 置为 1，ACK=k+1,并将该数据发送给 Server，Server 检查 ACK 是否为 k+1,ACK 是否为 1，如果正确则建立连接成功，Client 和 Server 进入 ESTABLISHED 状态，完成三次握手，随后 Client 与 Server 之间可以开始传输数据了。</p>
+</li>
+</ol>
+<h3 id="三-HTTP-请求"><a href="#三-HTTP-请求" class="headerlink" title="三. HTTP 请求"></a>三. HTTP 请求</h3><blockquote>
+<p>发送 HTTP 请求的过程就是构建 HTTP 请求报文并通过 TCP 协议中发送服务器指定端口（HTTP 协议 80/8080，HTTPS 协议 443）.<br>HTTP 请求报文由三部分组成： 请求头，请求行，请求体</p>
+</blockquote>
+<h4 id="四-服务器处理请求返回-HTTP-报文"><a href="#四-服务器处理请求返回-HTTP-报文" class="headerlink" title="四. 服务器处理请求返回 HTTP 报文"></a>四. 服务器处理请求返回 HTTP 报文</h4><blockquote>
+<p>后端从在固定的端口接收到 TCP 报文开始，这一部分对于编程语言中的 socket。他会对 TCP 连接进行处理，对 HTTP 协议进行解析，并按照报文格式进一步封装成 HTTP Request 对象，供上层使用。<br>HTTP 响应报文包括三部分：状态码，响应报头，响应报文</p>
+</blockquote>
+<h5 id="五-浏览器解析渲染页面"><a href="#五-浏览器解析渲染页面" class="headerlink" title="五. 浏览器解析渲染页面"></a>五. 浏览器解析渲染页面</h5><blockquote>
+<p>浏览器是一个边间谍西边渲染的过程。首先浏览器解析 HTML 文件构成 DOM 树，然后解析 CSS 文件构建渲染树，等到渲染树构建完成后，浏览器开始布局渲染树并将其绘制到屏幕上。这个过程比较复杂。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/2018-12-18-flex布局/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/18/2018-12-18-flex布局/" itemprop="url">flex 布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T00:00:00+08:00">
+                2018-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="flex-布局"><a href="#flex-布局" class="headerlink" title="flex 布局"></a>flex 布局</h1><ul>
+<li><a href="#1">1 容器</a></li>
+<li><a href="#1.1">1.1 父容器</a></li>
+<li><a href="#1.2">1.2 子容器</a></li>
+<li><a href="#2">2 轴</a></li>
+<li><a href="#2.1">2.1 主轴</a></li>
+<li><a href="#2.2">2.2 交叉轴</a></li>
+</ul>
+<blockquote>
+<p>flex 的核心概念就是容器和轴。容器包括外层的父容器和内层的子容器，轴包括主轴和交叉轴，可以说 flex 布局的全部特性都构建在这两个概念上。flex 布局涉及到 12 个 css 属性（不含 display： flex），其中父容器和子容器各 6 个。不过常用的属性只有 4 个，父容器，子容器各 2 个。</p>
+<p><img src="img/in-post/post-layout/flex基本概念.jpg" alt="flex基本概念"></p>
+</blockquote>
+<h2 id="1">容器</h2>
+
+<blockquote>
+<p>父容器可以统一设置子容器的排列方式，子容器也可以单独设置自身的排列方式，如果两者同时设置，以子容器的设置为准。</p>
+<p><img src="img/in-post/post-layout/flex容器.jpg" alt="flex 容器"></p>
+</blockquote>
+<h5 id="1.1">父容器</h5>
+
+<ol>
+<li>设置子容器沿主轴排列：justify-content<blockquote>
+<p>属性应用于定义如何沿着主轴方向排列子容器</p>
+<p><img src="img/in-post/post-layout/justify-content.jpg" alt="justify-content"></p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><blockquote>
+<p>flex-start: 沿着主轴方向起端对齐开始</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center"><br>    <p>display: flex</p><br>    <p>justify-content: flex-start</p><br>  </div><br>  <div class="flex-container" style="border-top: 1px solid grey;display: flex; justify-content: flex-start;"><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; justify-content: flex-start;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>flex-end: 沿着主轴方向末端对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center"><br>    <p>display: flex</p><br>    <p>justify-content: flex-end</p><br>  </div><br>  <div class="flex-container" style="border-top: 1px solid grey;display: flex; justify-content: flex-end;"><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; justify-content: flex-end;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>center: 沿着主轴方向剧中对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>justify-content: center</p><br>  </div><br>  <div class="flex-container" style="display: flex; justify-content: center;"><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; justify-content: center;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>space-around: 子容器沿<code>主轴</code>均匀分布，位于首末两端的子容器到父容器的距离是子容器间距的一半</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>justify-content: space-around</p><br>  </div><br>  <div class="flex-container" style="display: flex; justify-content: space-around;"><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; justify-content: space-around;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>space-between: 子容器沿着<code>主轴</code>均匀分布，位于首位两端的子容器和父容器其相切</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>justify-content: space-between</p><br>  </div><br>  <div class="flex-container" style="display: flex; justify-content: space-between;"><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; justify-content: space-between;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>设置子容器如何沿着交叉轴排列： align-items</li>
+</ol>
+<blockquote>
+<p><code>align-items</code> 属性用于定义如何沿着<code>交叉轴</code>方向分配子容器的间距</p>
+<p><img src="img/in-post/post-layout/align-items.jpg" alt="align-items"></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>flex-start: 在<code>交叉轴</code>的始端对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;display: flex;flex-direction: column"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: flex-start</p><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex; align-items: flex-start;"><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; align-items: flex-start;heihgt: 100%'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>flex-end: 沿着<code>交叉轴</code>的末端对齐</li>
+</ul>
+</blockquote>
+  <div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>    <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>      <p>display: flex</p><br>      <p>align-items: flex-end</p><br>    </div><br>    <div class="flex-container" style="flex: 1;display: flex; align-items: flex-end;"><br>      <div style="color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red">#son1</div><br>      <div style="color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue">#son2</div><br>      <div style="color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue">#son3</div><br>    </div><br>  </div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; align-items: flex-end;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>center: 沿着交叉轴方向剧中对齐</p>
+</blockquote>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: center</p><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex; align-items: center;"><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue">#son3</div><br>  </div><br></div>
+
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; align-items: center;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 60px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;height: 40px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>baseline： 基线对齐，这里的 baseline 默认是指首行文字，即<code>first baseline</code>，所以子容器向基线对齐，交叉轴起点到元素基线距离最大的子容器将会与交叉轴起始端相切以确定基线。</p>
+</blockquote>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: baseline</p><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex; align-items: baseline;"><br>    <div style="color: #fff;line-height: 40px;height: 60px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;height: 100px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 30px;height: 40px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; align-items: baseline;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;height: 40px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;height: 80px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;height: 30px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>stretch: 子容器沿着交叉轴方向的尺寸拉伸至与父容器</p>
+</blockquote>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: stretch</p><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex; align-items: stretch;"><br>    <div style="color: #fff;line-height: 40px;width:100px;background-color: red">#son1</div><br>    <div style="color: #fff;line-height: 60px;width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 30px;width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; align-items: stretch;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;width:100px;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;width:100px;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;width:100px;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="1.2">子容器</h2>
+
+<ol>
+<li>在主轴上如何伸缩： flex</li>
+</ol>
+<div style="margin: 0 auto; width: 500px;height:100px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>  </div><br>  <div class="flex-container" style="text-align: center;display: flex; justify-content: flex-start;"><br>    <div style="color: #fff;background-color: red; flex:1">#son1 <br>flex: 1</div><br>    <div style="color: #fff;background-color: skyblue; flex: 2">#son2 <br>flex:2</div><br>    <div style="color: #fff;background-color: blue;flex:1">#son3<br>flex: 1</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'text-align: center;display: flex; justify-content: flex-start;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;background-color: red; flex:1'</span>&gt;</span>#son1 <span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;background-color: skyblue; flex: 2'</span>&gt;</span>#son2 <span class="tag">&lt;<span class="name">br</span>&gt;</span>flex:2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;background-color: blue;flex:1'</span>&gt;</span>#son3<span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>单独设置子容器如何沿着交叉轴排列: align-self</li>
+</ol>
+<blockquote>
+<p><img src="img/in-post/post-layout/align-self.jpg" alt="align-self"></p>
+<p>每个子容器也可以单独定义沿交叉轴排列的方式，此属性的可选值与父容器<code>align-items</code>属性完全一直,如果两者同时设置则以子容器<code>align-self</code>属性为准</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>flex-start：沿着交叉轴起始端开始对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;display: flex; flex-direction: column"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: center</p><br>  </div><br>  <div class="flex-container" style="flex: 1;text-align: center;display: flex;align-items: center"><br>    <div style="color: #fff;line-height: 40px;background-color: red;align-self: flex-start">#son1 <br>align-self: flex-start</div><br>    <div style="color: #fff;line-height: 40px;background-color: skyblue;">#son2</div><br>    <div style="color: #fff;line-height: 40px;background-color: blue;">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex;align-items: center'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: red;align-self: flex-start'</span>&gt;</span>#son1 <span class="tag">&lt;<span class="name">br</span>&gt;</span>align-self: flex-start<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: skyblue;'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: blue;'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>flex-end: 沿着交叉轴末尾端对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;display: flex; flex-direction: column"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: center</p><br>  </div><br>  <div class="flex-container" style="flex: 1;text-align: center;display: flex;align-items: center"><br>    <div style="color: #fff;line-height: 40px;background-color: red;align-self: flex-end">#son1<br>align-self: flex-end</div><br>    <div style="color: #fff;line-height: 40px;background-color: skyblue;">#son2</div><br>    <div style="color: #fff;line-height: 40px;background-color: blue;">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex;align-items: center'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: red;align-self: flex-end'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span>align-self: flex-end<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: skyblue;'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: blue;'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>center： 沿着交叉轴方向剧中对齐</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;display: flex; flex-direction: column"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>align-items: flex-start</p><br>  </div><br>  <div class="flex-container" style="flex: 1;text-align: center;display: flex;align-items: flex-start"><br>    <div style="color: #fff;line-height: 40px;background-color: red;align-self: center">#son1<br>align-self: center</div><br>    <div style="color: #fff;line-height: 40px;background-color: skyblue;">#son2</div><br>    <div style="color: #fff;line-height: 40px;background-color: blue;">#son3</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex;align-items: flex-start'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: red;align-self: center'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span>align-self: center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: skyblue;'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;background-color: blue;'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>baseline: 基线对齐</p>
+</blockquote>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <!-- <p>align-items: baseline</p> --><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex;"><br>    <div style="color: #fff;line-height: 40px;height: 60px;width:100px;background-color: red; align-self: baseline;">#son1</div><br>    <div style="color: #fff;line-height: 60px;height: 100px;width:100px;background-color: skyblue; align-self: baseline;">#son2</div><br>    <div style="color: #fff;line-height: 30px;height: 40px;width:100px;background-color: blue; align-self: baseline;">#son3</div><br>  </div><br></div>
+
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex;'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 40px;height: 60px;width:100px;background-color: red; align-self: baseline;'</span>&gt;</span>#son1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 60px;height: 100px;width:100px;background-color: skyblue; align-self: baseline;'</span>&gt;</span>#son2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;height: 40px;width:100px;background-color: blue; align-self: baseline;'</span>&gt;</span>#son3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>stretch: 拉伸对齐</p>
+</blockquote>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000; display: flex;flex-direction: column;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <!-- <p>align-items: stretch</p> --><br>  </div><br>  <div class="flex-container" style="flex: 1;display: flex;"><br>    <div style="color: #fff;line-height: 40px; width:100px;background-color: red; align-self: stretch;">#son1<br>align-self: stretch</div><br>    <div style="color: #fff;line-height: 60px;height: 100px; width:100px;background-color: skyblue">#son2</div><br>    <div style="color: #fff;line-height: 30px;height: 40px; width:100px;background-color: blue">#son3</div><br>  </div><br></div>
+
+</li>
+</ul>
+<h2 id="2">轴</h2>
+
+<blockquote>
+<p>轴包括<code>主轴</code>和<code>交叉轴</code>,我们都知道 justify-content 属性决定子容器沿主轴的排列方式，align-items 属性决定子容器沿着交叉轴的排列方式。在 flex 布局中，flex-direction 属性决定主轴的方向，交叉轴的方向由主轴确定</p>
+<p><img src="img/in-post/post-layout/轴.png" alt="轴"></p>
+</blockquote>
+<h5 id="2.1">主轴</h5>
+
+<blockquote>
+<p>主轴的起端由<code>flex-start</code>标识，末端由<code>flex-end</code>表示，不同的主轴后防线对应的起始端和末尾端的位置也是不相同的</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>改变主轴的方向向右： flex-direction: row</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>flex-direction: row</p><br>  </div><br>  <div class="flex-container" style="display: flex; flex-direction: row"><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: red">#son1<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 2;background-color: skyblue">#son2<br> flex: 2</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: blue">#son3<br>flex: 1</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; flex-direction: row'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 2;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>改变主轴的方向向下： flex-direction: column</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>flex-direction: column</p><br>  </div><br>  <div class="flex-container" style="display: flex; flex-direction: column"><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: red">#son1<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: skyblue">#son2<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: blue">#son3<br>flex: 1</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; flex-direction: column'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>向左： flex-direction： row-reverse</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>flex-direction: row-reverse</p><br>  </div><br>  <div class="flex-container" style="display: flex; flex-direction: row-reverse"><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: red">#son1<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 2;background-color: skyblue">#son2<br> flex: 2</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: blue">#son3<br>flex: 1</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; flex-direction: row-reverse'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 2;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p>向右： flex-direction: column-reverse</p>
+</blockquote>
+</li>
+</ul>
+<div style="margin: 0 auto; width: 500px;height:200px;background-color: #000;"><br>  <div style="color: #fff;text-align:center;border-bottom: 1px solid grey;"><br>    <p>display: flex</p><br>    <p>flex-direction: column-reverse</p><br>  </div><br>  <div class="flex-container" style="display: flex; flex-direction: column-reverse"><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: red">#son1<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: skyblue">#son2<br> flex: 1</div><br>    <div style="color: #fff;line-height: 30px;flex: 1;background-color: blue">#son3<br>flex: 1</div><br>  </div><br></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'flex-container'</span> <span class="attr">style</span>=<span class="string">'display: flex; flex-direction: column-reverse'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: red'</span>&gt;</span>#son1<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: skyblue'</span>&gt;</span>#son2<span class="tag">&lt;<span class="name">br</span>&gt;</span> flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'color: #fff;line-height: 30px;flex: 1;background-color: blue'</span>&gt;</span>#son3<span class="tag">&lt;<span class="name">br</span>&gt;</span>flex: 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="2.2">交叉轴</h5>
+
+<blockquote>
+<p>主轴沿着逆时针方向旋转 90° 就得到了交叉轴，交叉轴的起始端和末尾端也由 flex-start 和 flex-end 表示</p>
+</blockquote>
+<p></p><h6>LinkTo</h6><br>  <a href="https://juejin.im/post/58e3a5a0a0bb9f0069fc16bb" target="_blank" rel="noopener">一劳永逸的搞定 flex 布局</a><p></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="zander">
+            
+              <p class="site-author-name" itemprop="name">zander</p>
+              <p class="site-description motion-element" itemprop="description">万丈红尘三杯酒，千秋大业一壶茶。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/itwebbers" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zander5211314@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zhuanlan.zhihu.com/zander" target="_blank" title="知乎专栏">
+                      
+                        <i class="fa fa-fw fa-知乎专栏"></i>知乎专栏</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zhuanlan.zhihu.com/itwebber" target="_blank" title="zhihu">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Itwebbers. 当前呈现版本 1.0.0</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
