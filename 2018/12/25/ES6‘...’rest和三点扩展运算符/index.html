@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ES6,JavaScript,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="万丈红尘三杯酒，千秋大业一壶茶。">
-<meta name="keywords" content="itwebbers web 前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="itwebbers">
-<meta property="og:url" content="http://yoursite.com/categories/CSS/index.html">
+<meta name="description" content="Scoped CSS 详解 当&amp;lt;style&amp;gt;标签有scoped属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换  123456789&amp;lt;style scoped&amp;gt;.example &amp;#123;  color: red;&amp;#125;&amp;lt;/sty">
+<meta name="keywords" content="ES6,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6‘...’rest和三点扩展运算符">
+<meta property="og:url" content="http://yoursite.com/2018/12/25/ES6‘...’rest和三点扩展运算符/index.html">
 <meta property="og:site_name" content="itwebbers">
-<meta property="og:description" content="万丈红尘三杯酒，千秋大业一壶茶。">
+<meta property="og:description" content="Scoped CSS 详解 当&amp;lt;style&amp;gt;标签有scoped属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换  123456789&amp;lt;style scoped&amp;gt;.example &amp;#123;  color: red;&amp;#125;&amp;lt;/sty">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-08T06:00:34.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="itwebbers">
-<meta name="twitter:description" content="万丈红尘三杯酒，千秋大业一壶茶。">
+<meta name="twitter:title" content="ES6‘...’rest和三点扩展运算符">
+<meta name="twitter:description" content="Scoped CSS 详解 当&amp;lt;style&amp;gt;标签有scoped属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换  123456789&amp;lt;style scoped&amp;gt;.example &amp;#123;  color: red;&amp;#125;&amp;lt;/sty">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/CSS/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/25/ES6‘...’rest和三点扩展运算符/">
 
 
 
 
 
-  <title>分类: CSS | itwebbers</title>
+  <title>ES6‘...’rest和三点扩展运算符 | itwebbers</title>
   
 
 
@@ -144,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -270,53 +271,191 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>CSS<small>分类</small>
-        </h1>
-      </div>
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/ES6‘...’rest和三点扩展运算符/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ES6‘...’rest和三点扩展运算符</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T00:00:00+08:00">
+                2018-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/20/2018-12-10-css盒模型/" itemprop="url">
-              
-                <span itemprop="name">css 盒模型</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-20T17:39:57+08:00" content="2018-12-20">
-          12-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1 id="Scoped-CSS-详解"><a href="#Scoped-CSS-详解" class="headerlink" title="Scoped CSS 详解"></a>Scoped CSS 详解</h1><blockquote>
+<p>当<code>&lt;style&gt;</code>标签有<code>scoped</code>属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">.example &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;example&quot;&gt;hi&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="子组件的根元素"><a href="#子组件的根元素" class="headerlink" title="子组件的根元素"></a>子组件的根元素</h2><blockquote>
+<p>使用<code>scoped</code>后，父组件的样式将不会渗透到子组件中。不过一个子组件的根节点会同时受其父组件的 scoped CSS 和子组件 scoped CSS 的影响。这样涉及是为了让父组件可以从布局的角度出发，调整其子组件根元素的样式。</p>
+</blockquote>
+<h2 id="深度作用选择器"><a href="#深度作用选择器" class="headerlink" title="深度作用选择器"></a>深度作用选择器</h2><blockquote>
+<p>如果你希望<code>scoped</code>样式中的一个选择器能够作用得更深，例如影响子组件，你可以使用 <code>&gt;&gt;&gt;</code> 操作符：</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span> <span class="selector-tag">scoped</span>&gt;</span><br><span class="line">  <span class="selector-class">.a</span> &gt;&gt;&gt; <span class="selector-class">.b</span> &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上述的代码会被编译成：</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span><span class="selector-attr">[data-v-f3f3eg9]</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<font color="red">有些像 Sass 之类的预处理器无法正确解析 <code>&gt;&gt;&gt;</code>。这种情况下你可以使用<code>/deep/</code> 操作符取而代之这个<code>&gt;&gt;&gt;</code>的别名，同样可以正常工作</font>
+</blockquote>
+<h2 id="动态生成的内容"><a href="#动态生成的内容" class="headerlink" title="动态生成的内容"></a>动态生成的内容</h2><blockquote>
+<p>通过<code>v-html</code>创建的 DOM 内容不受 Scoped 样式影响，但是你仍然可以通过深度作用选择器来为他们设置样式。</p>
+</blockquote>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/25/2018-12-25-vue之 scoped css/" rel="next" title="vue之scoped css">
+                <i class="fa fa-chevron-left"></i> vue之scoped css
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -324,6 +463,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -344,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -435,6 +587,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scoped-CSS-详解"><span class="nav-number">1.</span> <span class="nav-text">Scoped CSS 详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#子组件的根元素"><span class="nav-number">1.1.</span> <span class="nav-text">子组件的根元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度作用选择器"><span class="nav-number">1.2.</span> <span class="nav-text">深度作用选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态生成的内容"><span class="nav-number">1.3.</span> <span class="nav-text">动态生成的内容</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -575,6 +743,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

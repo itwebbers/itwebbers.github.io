@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ES6‘...’rest和三点扩展运算符]]></title>
+    <url>%2F2018%2F12%2F25%2FES6%E2%80%98...%E2%80%99rest%E5%92%8C%E4%B8%89%E7%82%B9%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[Scoped CSS 详解 当&lt;style&gt;标签有scoped属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换 123456789&lt;style scoped&gt;.example &#123; color: red;&#125;&lt;/style&gt;&lt;template&gt; &lt;div class=&quot;example&quot;&gt;hi&lt;/div&gt;&lt;/template&gt; 子组件的根元素 使用scoped后，父组件的样式将不会渗透到子组件中。不过一个子组件的根节点会同时受其父组件的 scoped CSS 和子组件 scoped CSS 的影响。这样涉及是为了让父组件可以从布局的角度出发，调整其子组件根元素的样式。 深度作用选择器 如果你希望scoped样式中的一个选择器能够作用得更深，例如影响子组件，你可以使用 &gt;&gt;&gt; 操作符： 123&lt;style scoped&gt; .a &gt;&gt;&gt; .b &#123; /* ... */ &#125;&lt;/style&gt; 上述的代码会被编译成： 123.a[data-v-f3f3eg9] .b &#123; /* ... */&#125; 有些像 Sass 之类的预处理器无法正确解析 &gt;&gt;&gt;。这种情况下你可以使用/deep/ 操作符取而代之这个&gt;&gt;&gt;的别名，同样可以正常工作 动态生成的内容 通过v-html创建的 DOM 内容不受 Scoped 样式影响，但是你仍然可以通过深度作用选择器来为他们设置样式。]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vue之scoped css]]></title>
     <url>%2F2018%2F12%2F25%2F2018-12-25-vue%E4%B9%8B%20scoped%20css%2F</url>
     <content type="text"><![CDATA[Scoped CSS 详解 当&lt;style&gt;标签有scoped属性时，它的 CSS 只作用于当前组件中的元素，这类似与 Shadow DOM 中的样式封装。他有一些注意事项，但不许任何 polyfill。它通过 PostCSS 来实现以下转换 123456789&lt;style scoped&gt;.example &#123; color: red;&#125;&lt;/style&gt;&lt;template&gt; &lt;div class=&quot;example&quot;&gt;hi&lt;/div&gt;&lt;/template&gt; 子组件的根元素 使用scoped后，父组件的样式将不会渗透到子组件中。不过一个子组件的根节点会同时受其父组件的 scoped CSS 和子组件 scoped CSS 的影响。这样涉及是为了让父组件可以从布局的角度出发，调整其子组件根元素的样式。 深度作用选择器 如果你希望scoped样式中的一个选择器能够作用得更深，例如影响子组件，你可以使用 &gt;&gt;&gt; 操作符： 123&lt;style scoped&gt; .a &gt;&gt;&gt; .b &#123; /* ... */ &#125;&lt;/style&gt; 上述的代码会被编译成： 123.a[data-v-f3f3eg9] .b &#123; /* ... */&#125; 有些像 Sass 之类的预处理器无法正确解析 &gt;&gt;&gt;。这种情况下你可以使用/deep/ 操作符取而代之这个&gt;&gt;&gt;的别名，同样可以正常工作 动态生成的内容 通过v-html创建的 DOM 内容不受 Scoped 样式影响，但是你仍然可以通过深度作用选择器来为他们设置样式。]]></content>
@@ -26,6 +38,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[vue生命周期详解]]></title>
+    <url>%2F2018%2F12%2F20%2F2018-12-10-vue%20the%20life%2F</url>
+    <content type="text"><![CDATA[vue2.0 生命周期详解 参考链接 阶段 状态 beforeCreate el 和 data 并未初始化 created 完成了 data 数据初始化，但是 el 并没有 beforeMount 完成了 el 和 data 数据初始化 mounted 完成挂载 beforeUpdate data 变化时会被触发 updated data 变化时会被触发 beforeDestroy 实例销毁前调用，依然可以使用 destroyed 对 data 的方法不会再出发周期函数，说明此时 vue 实例已经接触了事件监听和 dom 的绑定，但是 dom 依然存在 参考链接]]></content>
+      <categories>
+        <category>Vuejs</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[三栏布局]]></title>
     <url>%2F2018%2F12%2F20%2F2018-12-10-%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%2F</url>
     <content type="text"><![CDATA[三栏布局 假设高度已知，请写出三栏布局，其中左右栏各 300px，中间自适应 浮动 双飞翼布局/圣杯布局 1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;圣杯布局&lt;/title&gt; &lt;style&gt; .container &#123; overflow: hidden; &#125; .center &#123; width: 100%; height: 300px; background-color: red; &#125; .left, .right &#123; float: left; width: 200px; height: 300px; background-color: black; &#125; .right &#123; float: right; margin-left: -200px; background-color: brown; &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 定位 1234567891011121314151617181920212223242526272829303132333435363738394041424344&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;双飞翼布局&lt;/title&gt; &lt;style lang="css"&gt; .container &#123; overflow: hidden; position: relative; &#125; .center &#123; width: 100%; height: 300px; background-color: red; &#125; .left, .right &#123; width: 200px; height: 300px; position: absolute; top: 0; &#125; .left &#123; left: 0; background-color: aqua &#125; .right &#123; right: 0; background-color: blue &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; flex 布局 1234567891011121314151617181920212223242526272829303132&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;flex布局&lt;/title&gt; &lt;style&gt; .container &#123; display: flex; &#125; .center &#123; flex: 1; height: 300px; background-color: red; &#125; .left, .right &#123; width: 200px; background-color: lawngreen; height: 300px; &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 4.table 布局 123456789101112131415161718192021222324252627282930313233&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;table布局&lt;/title&gt; &lt;style&gt; .container &#123; display: table; &#125; .center &#123; display: table-cell; width: 100%; height: 300px; background-color: yellow; &#125; .left, .right &#123; width: 200px; height: 300px; background-color: brown; &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 5.网格布局 Grid 12345678910111213141516171819202122232425262728293031&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="ie=edge" /&gt; &lt;title&gt;Grid网格布局&lt;/title&gt; &lt;style&gt; .container &#123; display: grid; grid-template-columns: 200px auto 200px; grid-template-rows: 300px; &#125; .center &#123; background-color: red; &#125; .left, .right &#123; background-color: brown; &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="center"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt;]]></content>
@@ -36,18 +60,6 @@
         <tag>Web</tag>
         <tag>CSS</tag>
         <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[vue生命周期详解]]></title>
-    <url>%2F2018%2F12%2F20%2F2018-12-10-vue%20the%20life%2F</url>
-    <content type="text"><![CDATA[vue2.0 生命周期详解 参考链接 阶段 状态 beforeCreate el 和 data 并未初始化 created 完成了 data 数据初始化，但是 el 并没有 beforeMount 完成了 el 和 data 数据初始化 mounted 完成挂载 beforeUpdate data 变化时会被触发 updated data 变化时会被触发 beforeDestroy 实例销毁前调用，依然可以使用 destroyed 对 data 的方法不会再出发周期函数，说明此时 vue 实例已经接触了事件监听和 dom 的绑定，但是 dom 依然存在 参考链接]]></content>
-      <categories>
-        <category>Vuejs</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
