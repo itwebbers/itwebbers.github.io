@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript 本地对象和内置对象 && Browser 对象 && HTML DOM 对象]]></title>
+    <url>%2F2019%2F01%2F08%2F2019-01-08-JavaScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%92%8CWindows%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[JavaScript 本地对象和内置对象 &amp;&amp; Browser 对象 &amp;&amp; HTML DOM 对象 JavaScript 本地对象和内置对象 Array Boolean String Date MAth Number RegExp Global Browser BOM 对象 window Navigator Screen History Location HTML DOM 对象 Document Element Attribute Event]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[DOM 事件详解]]></title>
+    <url>%2F2019%2F01%2F08%2F2019-01-08-DOM%20Event%20(%E4%BA%8B%E4%BB%B6)%2F</url>
+    <content type="text"><![CDATA[DOM 事件基本概念 DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。DOM事件的级别： DOM0 element.onclick = function(){} DOM2 element.addEventListener(“click”, function(){}) DOM3 element.addEventListener(“keyup”, function(){}) DOM 事件模型 DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。 DOM 事件流事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window 描述 DOM 事件捕获的具体流程 Event 对象的常见应用12345event.preventDefault() // 阻止默认事件event.stopPropagation() // 阻止事件冒泡event.stopImmediatePropagation() // 事件响应优先级event.currentTarget // 当前绑定的事件对象event.target 自定义事件js 的观察者模式创建自定义事件 Event()构造函数，创建一个新的事件对象 event CustomEvent()创建一个自定义事件 document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化 12345678910// 创建事件var create = document.createEvent("Event")// 定义事件名为'build'create.initEvent("build", true, true)// 监听事件element.addEventListener("buiild", function(e)&#123; console.log(e.target)&#125;, false)// 出发对象可以是任何元素或者其他事件目标element.dispatchEvent(event) 自定义事件封装123456789101112131415161718192021(function()&#123; try&#123; // a : While a window.CustomEvent object exists, it cannot be called as a constructor. // b : There is no window.CustomEvent object new window.CustomEvent('T'); &#125;catch(e)&#123; var CustomEvent = function(event, params)&#123; params = params || &#123; bubbles: false, cancelable: false, detail: undefined &#125;; var evt = document.createEvent('CustomEvent'); evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail); return evt; &#125;; CustomEvent.prototype = window.Event.prototype; window.CustomEvent = CustomEvent; &#125;&#125;)();]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Event</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ES6‘...’rest和三点扩展运算符]]></title>
     <url>%2F2019%2F01%2F08%2F2019-01-08-ES6...rest%E5%92%8C%E4%B8%89%E7%82%B9%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
     <content type="text"><![CDATA[ES6 的 rest 参数和扩展运算符扩展运算符 含义 扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列 123console.log(1, ...[2, 3, 4], 5); // 1,2,3,4,5[...document.querySelectorAll('all')] // [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;] 扩展运算符主要是结合普通函数使用 12345678// 普通函数一起使用function fun(a, b, c, d, e)&#123;&#125;const args = [0, 2]fun(-1, ...args, 2, ...[3])// 扩展运算符后面还可以放置表达式cosnt arr = [ ...(x &gt; 0 ? ['x'] : []), 'y'] 替代函数的 apply 方法 12345678910// ES5 是写法function fun(x, y, z)&#123; // ...&#125;var args = [0, 1, 2]fun.apply(null, args)// ES6 的写法let args = [2, 3, 4]fun(...args) 合并或者连接数组 12345678let arr1 = [1, 2, 3]let arr2 = [4, 5, 6]// 代替push方法arr1.push(...arr2)// 代替concat方法[...arr1, ...arr2] 复制数组 123const arr1 = [1, 2, 3];// 将arr1复制给arr2const arr2 = [...arr1]; 解构赋值 123456// ES5let x = arr[0];let restArr = arr.slice(1)// ES6let [x, ...restArr] = arr; 字符串转化成数组 12let str = 'Hello World'const arr = [...str] 类数组转数组 1234let nodeList = document.querySelect('div')let nodeArr = [...nodeList]// 只可以将可以枚举的类数组对象转换成数组 map 和 Set 结构 1234// 数组去重[...new Set(arr)]// map]]></content>
@@ -171,19 +191,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[DOM 事件]]></title>
-    <url>%2F2018%2F12%2F10%2F2018-12-10-DOM%20%E4%BA%8B%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[“Yeah It’s on. ” DOM 事件基本概念 DOM 使 JavaScript 有能力对 HTML 上的事件做出反应 DOM事件的级别 DOM0 —————element.click = function(){} DOM2 —————element.addEventListener(‘click’, function(){}) DOM3 —————element.addEventListener(‘keyup’, function(){}) DOM 事件模型 DOM 的事件模型分为两种，一类是 IE 的冒泡事件模型，一类是 DOM 标准定义的冒泡与捕获类型 DOM 事件流事件流： window –&gt; 捕获 –&gt; 目标阶段 –&gt; 冒泡 –&gt; window 描述 DOM 事件捕获的具体流程 Event 对象的常见应用12345event.preventDefault() // 阻止默认事件event.stopPropagation() // 阻止事件冒泡event.stopImmediatePropagation() // 事件响应优先级event.currentTarget // 当前绑定的事件对象event.current 自定义事件js 的观察者模式创建自定义事件 Event()构造函数，创建一个新的事件对象 event CustomEvent（）创建一个自定义事件 document.CreateEvent()创建一个心的事件对象 event，随之调用自身的 init 方法进行初始化 12345678// 创建事件var create = document.createEvent('event')// 定义事件名称为buildelement.addEventListener('build', function(e)&#123; console.log(e)&#125;, false)// 触发对象可以是任何元素或者其他事件目标element.dispatchEvent(event) 封装自定义事件 123456789101112131415(function()&#123; try&#123; new window.CustomEvent('T') &#125;catch(e)&#123; var CustomEvent = function(event, params) &#123; params = params || &#123; bubbles: false, cancelable: fasle, detail: undefind &#125; var evt = document.createEvent('CustomEvent') evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail) return evt; &#125; CustomEvent.prototype = window.Event.prototype window.CustomEvent = CustomEvent &#125;&#125;)()]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>DOM</tag>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[html & css面试]]></title>
     <url>%2F2018%2F12%2F10%2F2018-12-10-html%26css%E9%9D%A2%E8%AF%95%2F</url>
     <content type="text"><![CDATA[HTML——————————test 页面导入样式时，使用 link 和@import 有什么区别？ link 属于 XHTML 标签，处理加载 css 以为，还可以有 RSS 及 rel 属性等等，@import 是 css 提供的，仅支持引入 css； 页面被加载时，link 会同时被加载，而@import 必须等页面加载完毕再加载； @import 是 css2.1 提出的，只在 IE5 以上才能被识别，而 link 是 XHTML 标签，无兼容问题； link 支持使用 js 控制 DOM 去改变样式，而@import 不支持； 浏览器的内核 浏览器的内核主要分为两个部分：渲染引擎，js 引擎 trident 内核：IE，360，搜狗等 gecko 内核：Netscape6 及以上版本，FF，MozillaSuite prosto 内核：Opera7 及以上，【opera 内核原为 presto，现在改为 blink】 webkit 内核：safari，chrome 等 【chrome：webkit 分支—-blink】 edge 浏览器：渲染引擎–edgeHTML，js 引擎–chakra 请描述一下，cookie，sessionStorage 和 localStorage 的区别？ cookie 是为了表示用户身份而存储再用户本地终端上的数据（通常经过加密）cookie 数据始终在同源的 http 请求中携带（即使不需要），即会在浏览器和服务器间来回传递seesionStroage 和 localStorage 不会自动把数据发给服务器，仅在本地保存； 存储大小cookie 数据大小不能超过 4k；sessionStorage 和 localStorage 可以达到 5M 有效时间localStorage 存储持久数据，主动删除sessionStrorage 数据在当前浏览器关闭后自动删除cookie 设置的 cookie 国企时间之前一直有效，即使窗口关闭或者浏览器关闭 HTML5 的 form 如何关闭自动完成？ 在 form 或者里面的 input 标签上添加: autoComplete=off 如何在页面上实现一个圆形的点击区域？ map + area 或者 svg border-radius 纯 js 实现 1px 问题？ https://www.jianshu.com/p/d62d22b44ce4]]></content>
@@ -195,6 +202,19 @@
         <tag>css</tag>
         <tag>HTML5</tag>
         <tag>CSS3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[DOM 事件]]></title>
+    <url>%2F2018%2F12%2F10%2F2018-12-10-DOM%20%E4%BA%8B%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[“Yeah It’s on. ” DOM 事件基本概念 DOM 使 JavaScript 有能力对 HTML 上的事件做出反应 DOM事件的级别 DOM0 —————element.click = function(){} DOM2 —————element.addEventListener(‘click’, function(){}) DOM3 —————element.addEventListener(‘keyup’, function(){}) DOM 事件模型 DOM 的事件模型分为两种，一类是 IE 的冒泡事件模型，一类是 DOM 标准定义的冒泡与捕获类型 DOM 事件流事件流： window –&gt; 捕获 –&gt; 目标阶段 –&gt; 冒泡 –&gt; window 描述 DOM 事件捕获的具体流程 Event 对象的常见应用12345event.preventDefault() // 阻止默认事件event.stopPropagation() // 阻止事件冒泡event.stopImmediatePropagation() // 事件响应优先级event.currentTarget // 当前绑定的事件对象event.current 自定义事件js 的观察者模式创建自定义事件 Event()构造函数，创建一个新的事件对象 event CustomEvent（）创建一个自定义事件 document.CreateEvent()创建一个心的事件对象 event，随之调用自身的 init 方法进行初始化 12345678// 创建事件var create = document.createEvent('event')// 定义事件名称为buildelement.addEventListener('build', function(e)&#123; console.log(e)&#125;, false)// 触发对象可以是任何元素或者其他事件目标element.dispatchEvent(event) 封装自定义事件 123456789101112131415(function()&#123; try&#123; new window.CustomEvent('T') &#125;catch(e)&#123; var CustomEvent = function(event, params) &#123; params = params || &#123; bubbles: false, cancelable: fasle, detail: undefind &#125; var evt = document.createEvent('CustomEvent') evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail) return evt; &#125; CustomEvent.prototype = window.Event.prototype window.CustomEvent = CustomEvent &#125;&#125;)()]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>DOM</tag>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
