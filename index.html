@@ -285,6 +285,435 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/2019-01-09-sass中文文档/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/08/2019-01-09-sass中文文档/" itemprop="url">JavaScript 本地对象和内置对象 && Browser 对象 && HTML DOM 对象</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T00:00:00+08:00">
+                2019-01-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="sass-中文文档"><a href="#sass-中文文档" class="headerlink" title="sass 中文文档"></a>sass 中文文档</h1><blockquote>
+<p>sass css 预编译器，是由按强化 css 的工具。</p>
+</blockquote>
+<h2 id="sass-特点"><a href="#sass-特点" class="headerlink" title="sass 特点"></a>sass 特点</h2><ol>
+<li>完美兼容 css3</li>
+<li>在 css 基础上增加了<code>变量</code>，<code>嵌套（nesting）</code>,<code>混合（mixins）</code>,<code>导入（import）</code>;</li>
+<li>通过函数进行颜色值与属性值的计算</li>
+<li>提供控制指令等高级功能</li>
+<li>自定义输出格式</li>
+</ol>
+<h2 id="css-功能扩展"><a href="#css-功能扩展" class="headerlink" title="css 功能扩展"></a>css 功能扩展</h2><ol>
+<li>嵌套规则<blockquote>
+<p>Sass 允许将一套 css 样式嵌套进另一套样式中，内层的样式将它外层的选择器作为父选择器</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  nav &#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 14<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>父选择器 &amp;</li>
+</ol>
+<blockquote>
+<p>用<code>&amp;</code>代表嵌套规则外层的父选择器</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>属性嵌套</li>
+</ol>
+<blockquote>
+<p>为了方便管理复杂的属性，同时也为了避免重复的输入，Sass 允许将属性嵌套在命名空间中</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.funky</span> &#123;</span><br><span class="line">  font &#123;</span><br><span class="line">    <span class="selector-tag">family</span>: <span class="selector-tag">fantasy</span>;</span><br><span class="line">    <span class="selector-tag">size</span>: 15<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>注释： <code>/* */</code> 与 <code>//</code><blockquote>
+<p>Sass 支持标准的 css 多行注释<code>/* */</code>，以及单行注释 <code>//</code>, 前者会被完整输出到编译后的 css 文件中，而后者则不会</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* This comment is</span></span><br><span class="line"><span class="comment"> * several lines long.</span></span><br><span class="line"><span class="comment"> * since it uses the CSS comment syntax,</span></span><br><span class="line"><span class="comment"> * it will appear in the CSS output. */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// These comments are only one line long each.</span><br><span class="line">// They won't appear in the CSS output,</span><br><span class="line">// since they use the single-line comment syntax.</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="SassScript"><a href="#SassScript" class="headerlink" title="SassScript"></a>SassScript</h2><ol>
+<li>变量 <code>$</code> (Variable: \$)<blockquote>
+<p>SassScript 最普遍的用法就是变量，变量以美元符号开头，赋值方法与 css 属性的写法一样</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 变量声明</span><br><span class="line">$width: 100px;</span><br><span class="line"></span><br><span class="line">// 调用方式</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: $width;</span><br><span class="line">&#125;</span><br><span class="line">// 将局部变量转换为全局变量可以在其后添加 !global</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  $width: 100px !global;</span><br><span class="line">  width: $width;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>数据类型</p>
+<blockquote>
+<p>SassScript 支持 6 中主要的数据类型</p>
+</blockquote>
+<ul>
+<li>数字</li>
+<li>字符串</li>
+<li>颜色</li>
+<li>布尔值 true/false</li>
+<li>空值，null</li>
+<li>数组</li>
+<li><p>maps</p>
+<p>2.1 字符串</p>
+<blockquote>
+<p>有引号字符串和无引号字符串；使用字符串变量的方式： <code>#{}</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>运算</p>
+<blockquote>
+<p>所有数据类型均支持相等运算 == 或 !=，此外，每种数据类型也有其各自支持的运算方式。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>数字运算<blockquote>
+<p>SassScript 支持数字的加减乘除、取整等运算 (+, -, *, /, %)，如果必要会在不同单位间转换值</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  font: 10px/8px; // Plain CSS, no division</span><br><span class="line">  $width: 1000px;</span><br><span class="line">  width: $width/2; // Uses a variable, does division</span><br><span class="line">  width: round(1.5) / 2; // Uses a function, does division</span><br><span class="line">  height: (500px/2); // Uses parentheses, does division</span><br><span class="line">  margin-left: 5px + 8px/2px; // Uses +, does division</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>圆括号用来影响运算的顺序</li>
+</ul>
+<ol start="4">
+<li>函数指令</li>
+</ol>
+<blockquote>
+<p>Sass 支持自定义函数，并能在任何属性值或 Sass script 中使用：</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$grid-width: 40px;</span><br><span class="line">$gutter-width: 10px;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">function</span> grid-width($n) &#123;</span><br><span class="line">  @<span class="keyword">return</span> $n * $grid-width + ($n - <span class="number">1</span>) * $gutter-width;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">grid-width</span>(5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Rules-与指令-Rules-and-Directives"><a href="#Rules-与指令-Rules-and-Directives" class="headerlink" title="@-Rules 与指令 (@-Rules and Directives)"></a>@-Rules 与指令 (@-Rules and Directives)</h2><ol>
+<li><p>@import</p>
+<blockquote>
+<p>Sass 拓展了@import 的功能，允许其导入 SCSS 或 SaSS 文件。被导入的文件将合并编译到同一个 css 文件中，另外，被导入的文件中所包含的变量或者混合指令（mixin）都可以在导入的文件中使用。</p>
+</blockquote>
+<ul>
+<li>嵌套@import</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 假设 example.scss 文件包含以下样式：</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.example</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">// 然后导入到 #main 样式内</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">  @import 'example';</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@media</p>
+</li>
+<li><p>@extend</p>
+<blockquote>
+<p>在设计网页的时候常常遇到这种情况：一个元素使用的样式与另一个元素完全相同，但又添加了额外的样式。通常会在 HTML 中给元素定义两个 class，一个通用样式，一个特殊样式</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.seriousError</span> &#123;</span><br><span class="line">  @extend .error;</span><br><span class="line">  <span class="selector-tag">border-width</span>: 3<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="混合指令（Mixin-Directives）"><a href="#混合指令（Mixin-Directives）" class="headerlink" title="混合指令（Mixin Directives）"></a>混合指令（Mixin Directives）</h2><blockquote>
+<p>混合指令（Mixin）用于定义可重复使用的样式，避免了使用无意的 class，比如.float-left。混合指令可以包含所有的 css 规则，绝大部分 Sass 规则，甚至通过参数功能引入变量，输出多样化的样式。</p>
+</blockquote>
+<ul>
+<li>定义混合指令 @mixin (Defining a Mixin: @mixin)</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> clearfix &#123;</span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'.'</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">  * <span class="selector-tag">html</span> &amp; &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>使用 Mixin 样式： <code>@include</code></p>
+<blockquote>
+<p>使用<code>@include</code>之快令引入混合样式，格式是在其后添加混合名称</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page-title</span> &#123;</span><br><span class="line">  @include clearfix;</span><br><span class="line">  <span class="selector-tag">padding</span>: 4<span class="selector-tag">px</span>;</span><br><span class="line">  <span class="selector-tag">margin-top</span>: 10<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/2019-01-08-DOM Event (事件)/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/08/2019-01-08-DOM Event (事件)/" itemprop="url">DOM 事件详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T00:00:00+08:00">
+                2019-01-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。<br><code>DOM事件的级别：</code></p>
+</blockquote>
+<ul>
+<li>DOM0 element.onclick = function(){}</li>
+<li>DOM2 element.addEventListener(“click”, function(){})</li>
+<li>DOM3 element.addEventListener(“keyup”, function(){})</li>
+</ul>
+<h2 id="DOM-事件模型"><a href="#DOM-事件模型" class="headerlink" title="DOM 事件模型"></a>DOM 事件模型</h2><blockquote>
+<p>DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。</p>
+</blockquote>
+<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window</p>
+<h2 id="描述-DOM-事件捕获的具体流程"><a href="#描述-DOM-事件捕获的具体流程" class="headerlink" title="描述 DOM 事件捕获的具体流程"></a>描述 DOM 事件捕获的具体流程</h2><img src="/public/images/eventflow.svg">
+<!-- ![DOM事件流](../assets/images/eventflow.svg) -->
+<h2 id="Event-对象的常见应用"><a href="#Event-对象的常见应用" class="headerlink" title="Event 对象的常见应用"></a>Event 对象的常见应用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() <span class="comment">// 阻止默认事件</span></span><br><span class="line">event.stopPropagation() <span class="comment">// 阻止事件冒泡</span></span><br><span class="line">event.stopImmediatePropagation() <span class="comment">// 事件响应优先级</span></span><br><span class="line">event.currentTarget <span class="comment">// 当前绑定的事件对象</span></span><br><span class="line">event.target</span><br></pre></td></tr></table></figure>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p><a href="https://www.cnblogs.com/LuckyWinty/p/5796190.html" target="_blank" rel="noopener">js 的观察者模式创建自定义事件</a></p>
+<ul>
+<li><p>Event()构造函数，创建一个新的事件对象 event</p>
+</li>
+<li><p>CustomEvent()创建一个自定义事件</p>
+</li>
+<li>document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建事件</span></span><br><span class="line"><span class="keyword">var</span> create = <span class="built_in">document</span>.createEvent(<span class="string">"Event"</span>)</span><br><span class="line"><span class="comment">// 定义事件名为'build'</span></span><br><span class="line">create.initEvent(<span class="string">"build"</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">element.addEventListener(<span class="string">"buiild"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target)</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br><span class="line"><span class="comment">// 出发对象可以是任何元素或者其他事件目标</span></span><br><span class="line">element.dispatchEvent(event)</span><br></pre></td></tr></table></figure>
+<h2 id="自定义事件封装"><a href="#自定义事件封装" class="headerlink" title="自定义事件封装"></a><code>自定义事件封装</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">// a : While a window.CustomEvent object exists, it cannot be called as a constructor.</span></span><br><span class="line">        <span class="comment">// b : There is no window.CustomEvent object</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">window</span>.CustomEvent(<span class="string">'T'</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        <span class="keyword">var</span> CustomEvent = <span class="function"><span class="keyword">function</span>(<span class="params">event, params</span>)</span>&#123;</span><br><span class="line">            params = params || &#123; <span class="attr">bubbles</span>: <span class="literal">false</span>, <span class="attr">cancelable</span>: <span class="literal">false</span>, <span class="attr">detail</span>: <span class="literal">undefined</span> &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> evt = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span><br><span class="line"></span><br><span class="line">            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> evt;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        CustomEvent.prototype = <span class="built_in">window</span>.Event.prototype;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">window</span>.CustomEvent = CustomEvent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/2019-01-08-JavaScript内置对象和Windows内置对象/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -592,172 +1021,6 @@
 <li>map 和 Set 结构</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/2019-01-08-DOM Event (事件)/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zander">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="itwebbers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/08/2019-01-08-DOM Event (事件)/" itemprop="url">DOM 事件详解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T00:00:00+08:00">
-                2019-01-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
-<p>DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。<br><code>DOM事件的级别：</code></p>
-</blockquote>
-<ul>
-<li>DOM0 element.onclick = function(){}</li>
-<li>DOM2 element.addEventListener(“click”, function(){})</li>
-<li>DOM3 element.addEventListener(“keyup”, function(){})</li>
-</ul>
-<h2 id="DOM-事件模型"><a href="#DOM-事件模型" class="headerlink" title="DOM 事件模型"></a>DOM 事件模型</h2><blockquote>
-<p>DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。</p>
-</blockquote>
-<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window</p>
-<h2 id="描述-DOM-事件捕获的具体流程"><a href="#描述-DOM-事件捕获的具体流程" class="headerlink" title="描述 DOM 事件捕获的具体流程"></a>描述 DOM 事件捕获的具体流程</h2><img src="/public/images/eventflow.svg">
-<!-- ![DOM事件流](../assets/images/eventflow.svg) -->
-<h2 id="Event-对象的常见应用"><a href="#Event-对象的常见应用" class="headerlink" title="Event 对象的常见应用"></a>Event 对象的常见应用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() <span class="comment">// 阻止默认事件</span></span><br><span class="line">event.stopPropagation() <span class="comment">// 阻止事件冒泡</span></span><br><span class="line">event.stopImmediatePropagation() <span class="comment">// 事件响应优先级</span></span><br><span class="line">event.currentTarget <span class="comment">// 当前绑定的事件对象</span></span><br><span class="line">event.target</span><br></pre></td></tr></table></figure>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p><a href="https://www.cnblogs.com/LuckyWinty/p/5796190.html" target="_blank" rel="noopener">js 的观察者模式创建自定义事件</a></p>
-<ul>
-<li><p>Event()构造函数，创建一个新的事件对象 event</p>
-</li>
-<li><p>CustomEvent()创建一个自定义事件</p>
-</li>
-<li>document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建事件</span></span><br><span class="line"><span class="keyword">var</span> create = <span class="built_in">document</span>.createEvent(<span class="string">"Event"</span>)</span><br><span class="line"><span class="comment">// 定义事件名为'build'</span></span><br><span class="line">create.initEvent(<span class="string">"build"</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">element.addEventListener(<span class="string">"buiild"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target)</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br><span class="line"><span class="comment">// 出发对象可以是任何元素或者其他事件目标</span></span><br><span class="line">element.dispatchEvent(event)</span><br></pre></td></tr></table></figure>
-<h2 id="自定义事件封装"><a href="#自定义事件封装" class="headerlink" title="自定义事件封装"></a><code>自定义事件封装</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">// a : While a window.CustomEvent object exists, it cannot be called as a constructor.</span></span><br><span class="line">        <span class="comment">// b : There is no window.CustomEvent object</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">window</span>.CustomEvent(<span class="string">'T'</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        <span class="keyword">var</span> CustomEvent = <span class="function"><span class="keyword">function</span>(<span class="params">event, params</span>)</span>&#123;</span><br><span class="line">            params = params || &#123; <span class="attr">bubbles</span>: <span class="literal">false</span>, <span class="attr">cancelable</span>: <span class="literal">false</span>, <span class="attr">detail</span>: <span class="literal">undefined</span> &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> evt = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span><br><span class="line"></span><br><span class="line">            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> evt;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        CustomEvent.prototype = <span class="built_in">window</span>.Event.prototype;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">window</span>.CustomEvent = CustomEvent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1684,177 +1947,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-Array design/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zander">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="itwebbers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/20/2018-12-10-Array design/" itemprop="url">Array 数据相关处理方式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-20T17:39:57+08:00">
-                2018-12-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="数组相关"><a href="#数组相关" class="headerlink" title="数组相关"></a>数组相关</h1><blockquote>
-<p>数据去重，排序等等处理方式</p>
-</blockquote>
-<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><ul>
-<li>filter</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.filter(<span class="function"><span class="keyword">function</span>(<span class="params">val, index, arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.indexOf(val) === index;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>ES6</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 标准实现方法</span></span><br><span class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  扩展运算符</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>reduce</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = arr.sort().reduce(<span class="function">(<span class="params">init, current</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(init.length === <span class="number">0</span> || init[init.length - <span class="number">1</span>] != current)&#123;</span><br><span class="line">        init.push(current);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> init;</span><br><span class="line">&#125;, [])</span><br></pre></td></tr></table></figure>
-<ul>
-<li>push</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tempArray = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(tempArrray[i].indexOf(arr[i] === <span class="number">-1</span>))&#123;</span><br><span class="line">            tempArray.push(aarr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;(i))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>排序去除相邻的重复元素</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortArray = arr.sort()</span><br><span class="line"><span class="keyword">let</span> tempArray = []</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(sortArray[i] != sortArray[i+<span class="number">1</span>])&#123;</span><br><span class="line">        tempArray.push(sortArray[i])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>splice</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> len = arr.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] === arr[j]) &#123;</span><br><span class="line">            arr.splice(i,<span class="number">1</span>);</span><br><span class="line">            len--;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="判断是否是数组"><a href="#判断是否是数组" class="headerlink" title="判断是否是数组"></a>判断是否是数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript新增API isArray</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用原型链</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(arr).split(<span class="string">" "</span>)[<span class="number">1</span>].slice(<span class="number">0</span>, <span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="可枚举的对象转化成数组"><a href="#可枚举的对象转化成数组" class="headerlink" title="可枚举的对象转化成数组"></a>可枚举的对象转化成数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(obj)</span><br><span class="line">[].slice.apply(obj, [<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype.slice.call(obj)</span><br><span class="line"><span class="built_in">Array</span>.prototype.slice.apply(obj, [<span class="number">0</span>])</span><br><span class="line"><span class="comment">// Array.prototype.push.apply(obj.arguments)</span></span><br><span class="line">[第五个方法参考资料](https:<span class="comment">//www.quora.com/How-does-Array-prototype-push-apply-work-in-JavaScript)</span></span><br></pre></td></tr></table></figure>
-<h2 id="数组对象排序"><a href="#数组对象排序" class="headerlink" title="数组对象排序"></a>数组对象排序</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sortBy = <span class="function"><span class="keyword">function</span>(<span class="params">attr, rev</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// attr 排序的属性，rev排序的方式</span></span><br><span class="line">    <span class="comment">// 如果第二个参数如果没有传，默认是升序排列</span></span><br><span class="line">    <span class="keyword">if</span>(rev == undefind)&#123;</span><br><span class="line">        rev = <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        rev = (rev) ? <span class="number">1</span> : <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">        a = a[attr];</span><br><span class="line">        b = b[attr];</span><br><span class="line">        <span class="keyword">if</span>(a &lt; b)&#123;</span><br><span class="line">            <span class="keyword">return</span> rev * <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a &gt; b) &#123;</span><br><span class="line">            <span class="keyword">return</span> rev * <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.sort(sortBy(<span class="string">"number"</span>, <span class="literal">false</span>))</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/2018-12-10-css盒模型/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2009,7 +2101,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2057,7 +2149,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
