@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
+    <title><![CDATA[windows power shell 常用命令]]></title>
     <url>%2F2019%2F05%2F06%2F2019-05-06-windows%20power%20shell%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[Windows power shell 常用命令 德心孤必有邻，心怀志定创业！ 创建文件 1new-item filesname.cs 创建文件夹 1new-item directoryname -type derictory 删除文件 1234567891011// 删除目录下指定的文件remove-item c:/directoryname filesname.cs// 删除目录下所有的文件remove-item c:/directoryname/*// 删除---排除某类型文件remove-item c:/directoryname/* -exclude *.cs// 仅仅删除某种类型文件remove-item c:/directoryname/* -include *.cs 打开文件 123// .\文件名.扩展名.\filesname.cs]]></content>
       <categories>
