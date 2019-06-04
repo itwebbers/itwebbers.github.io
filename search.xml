@@ -51,15 +51,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[DOM 事件详解]]></title>
-    <url>%2F2019%2F01%2F08%2F2019-01-08-DOM%20Event%20(%E4%BA%8B%E4%BB%B6)%2F</url>
-    <content type="text"><![CDATA[DOM 事件基本概念 DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。DOM事件的级别： DOM0 element.onclick = function(){} DOM2 element.addEventListener(“click”, function(){}) DOM3 element.addEventListener(“keyup”, function(){}) DOM 事件模型 DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。 DOM 事件流事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window 描述 DOM 事件捕获的具体流程 Event 对象的常见应用12345event.preventDefault() // 阻止默认事件event.stopPropagation() // 阻止事件冒泡event.stopImmediatePropagation() // 事件响应优先级event.currentTarget // 当前绑定的事件对象event.target 自定义事件js 的观察者模式创建自定义事件 Event()构造函数，创建一个新的事件对象 event CustomEvent()创建一个自定义事件 document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化 12345678910// 创建事件var create = document.createEvent("Event")// 定义事件名为'build'create.initEvent("build", true, true)// 监听事件element.addEventListener("buiild", function(e)&#123; console.log(e.target)&#125;, false)// 出发对象可以是任何元素或者其他事件目标element.dispatchEvent(event) 自定义事件封装123456789101112131415161718192021(function()&#123; try&#123; // a : While a window.CustomEvent object exists, it cannot be called as a constructor. // b : There is no window.CustomEvent object new window.CustomEvent('T'); &#125;catch(e)&#123; var CustomEvent = function(event, params)&#123; params = params || &#123; bubbles: false, cancelable: false, detail: undefined &#125;; var evt = document.createEvent('CustomEvent'); evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail); return evt; &#125;; CustomEvent.prototype = window.Event.prototype; window.CustomEvent = CustomEvent; &#125;&#125;)();]]></content>
+    <title><![CDATA[ES6‘...’rest和三点扩展运算符]]></title>
+    <url>%2F2019%2F01%2F08%2F2019-01-08-ES6...rest%E5%92%8C%E4%B8%89%E7%82%B9%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[ES6 的 rest 参数和扩展运算符扩展运算符 含义 扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列 123console.log(1, ...[2, 3, 4], 5); // 1,2,3,4,5[...document.querySelectorAll('all')] // [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;] 扩展运算符主要是结合普通函数使用 12345678// 普通函数一起使用function fun(a, b, c, d, e)&#123;&#125;const args = [0, 2]fun(-1, ...args, 2, ...[3])// 扩展运算符后面还可以放置表达式cosnt arr = [ ...(x &gt; 0 ? ['x'] : []), 'y'] 替代函数的 apply 方法 12345678910// ES5 是写法function fun(x, y, z)&#123; // ...&#125;var args = [0, 1, 2]fun.apply(null, args)// ES6 的写法let args = [2, 3, 4]fun(...args) 合并或者连接数组 12345678let arr1 = [1, 2, 3]let arr2 = [4, 5, 6]// 代替push方法arr1.push(...arr2)// 代替concat方法[...arr1, ...arr2] 复制数组 123const arr1 = [1, 2, 3];// 将arr1复制给arr2const arr2 = [...arr1]; 解构赋值 123456// ES5let x = arr[0];let restArr = arr.slice(1)// ES6let [x, ...restArr] = arr; 字符串转化成数组 12let str = 'Hello World'const arr = [...str] 类数组转数组 1234let nodeList = document.querySelect('div')let nodeArr = [...nodeList]// 只可以将可以枚举的类数组对象转换成数组 map 和 Set 结构 1234// 数组去重[...new Set(arr)]// map]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>ES6</category>
       </categories>
       <tags>
+        <tag>ES6</tag>
         <tag>JavaScript</tag>
-        <tag>Event</tag>
       </tags>
   </entry>
   <entry>
@@ -71,15 +71,15 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[ES6‘...’rest和三点扩展运算符]]></title>
-    <url>%2F2019%2F01%2F08%2F2019-01-08-ES6...rest%E5%92%8C%E4%B8%89%E7%82%B9%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
-    <content type="text"><![CDATA[ES6 的 rest 参数和扩展运算符扩展运算符 含义 扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列 123console.log(1, ...[2, 3, 4], 5); // 1,2,3,4,5[...document.querySelectorAll('all')] // [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;] 扩展运算符主要是结合普通函数使用 12345678// 普通函数一起使用function fun(a, b, c, d, e)&#123;&#125;const args = [0, 2]fun(-1, ...args, 2, ...[3])// 扩展运算符后面还可以放置表达式cosnt arr = [ ...(x &gt; 0 ? ['x'] : []), 'y'] 替代函数的 apply 方法 12345678910// ES5 是写法function fun(x, y, z)&#123; // ...&#125;var args = [0, 1, 2]fun.apply(null, args)// ES6 的写法let args = [2, 3, 4]fun(...args) 合并或者连接数组 12345678let arr1 = [1, 2, 3]let arr2 = [4, 5, 6]// 代替push方法arr1.push(...arr2)// 代替concat方法[...arr1, ...arr2] 复制数组 123const arr1 = [1, 2, 3];// 将arr1复制给arr2const arr2 = [...arr1]; 解构赋值 123456// ES5let x = arr[0];let restArr = arr.slice(1)// ES6let [x, ...restArr] = arr; 字符串转化成数组 12let str = 'Hello World'const arr = [...str] 类数组转数组 1234let nodeList = document.querySelect('div')let nodeArr = [...nodeList]// 只可以将可以枚举的类数组对象转换成数组 map 和 Set 结构 1234// 数组去重[...new Set(arr)]// map]]></content>
+    <title><![CDATA[DOM 事件详解]]></title>
+    <url>%2F2019%2F01%2F08%2F2019-01-08-DOM%20Event%20(%E4%BA%8B%E4%BB%B6)%2F</url>
+    <content type="text"><![CDATA[DOM 事件基本概念 DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。DOM事件的级别： DOM0 element.onclick = function(){} DOM2 element.addEventListener(“click”, function(){}) DOM3 element.addEventListener(“keyup”, function(){}) DOM 事件模型 DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。 DOM 事件流事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window 描述 DOM 事件捕获的具体流程 Event 对象的常见应用12345event.preventDefault() // 阻止默认事件event.stopPropagation() // 阻止事件冒泡event.stopImmediatePropagation() // 事件响应优先级event.currentTarget // 当前绑定的事件对象event.target 自定义事件js 的观察者模式创建自定义事件 Event()构造函数，创建一个新的事件对象 event CustomEvent()创建一个自定义事件 document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化 12345678910// 创建事件var create = document.createEvent("Event")// 定义事件名为'build'create.initEvent("build", true, true)// 监听事件element.addEventListener("buiild", function(e)&#123; console.log(e.target)&#125;, false)// 出发对象可以是任何元素或者其他事件目标element.dispatchEvent(event) 自定义事件封装123456789101112131415161718192021(function()&#123; try&#123; // a : While a window.CustomEvent object exists, it cannot be called as a constructor. // b : There is no window.CustomEvent object new window.CustomEvent('T'); &#125;catch(e)&#123; var CustomEvent = function(event, params)&#123; params = params || &#123; bubbles: false, cancelable: false, detail: undefined &#125;; var evt = document.createEvent('CustomEvent'); evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail); return evt; &#125;; CustomEvent.prototype = window.Event.prototype; window.CustomEvent = CustomEvent; &#125;&#125;)();]]></content>
       <categories>
-        <category>ES6</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>ES6</tag>
         <tag>JavaScript</tag>
+        <tag>Event</tag>
       </tags>
   </entry>
   <entry>

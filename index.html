@@ -934,7 +934,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-08-DOM Event (事件)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-08-ES6...rest和三点扩展运算符/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zander">
@@ -953,7 +953,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="2019/01/08/2019-01-08-DOM Event (事件)/" itemprop="url">DOM 事件详解</a></h1>
+                <a class="post-title-link" href="2019/01/08/2019-01-08-ES6...rest和三点扩展运算符/" itemprop="url">ES6‘...’rest和三点扩展运算符</a></h1>
         
 
         <div class="post-meta">
@@ -988,8 +988,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -1027,31 +1027,45 @@
       
         
           
-            <h1 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
-<p>DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。<br><code>DOM事件的级别：</code></p>
+            <h1 id="ES6-的-rest-参数和扩展运算符"><a href="#ES6-的-rest-参数和扩展运算符" class="headerlink" title="ES6 的 rest 参数和扩展运算符"></a>ES6 的 rest 参数和扩展运算符</h1><h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><ul>
+<li>含义<blockquote>
+<p>扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列</p>
 </blockquote>
-<ul>
-<li>DOM0 element.onclick = function(){}</li>
-<li>DOM2 element.addEventListener(“click”, function(){})</li>
-<li>DOM3 element.addEventListener(“keyup”, function(){})</li>
-</ul>
-<h2 id="DOM-事件模型"><a href="#DOM-事件模型" class="headerlink" title="DOM 事件模型"></a>DOM 事件模型</h2><blockquote>
-<p>DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。</p>
-</blockquote>
-<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window</p>
-<h2 id="描述-DOM-事件捕获的具体流程"><a href="#描述-DOM-事件捕获的具体流程" class="headerlink" title="描述 DOM 事件捕获的具体流程"></a>描述 DOM 事件捕获的具体流程</h2><img src="/public/images/eventflow.svg">
-<!-- ![DOM事件流](../assets/images/eventflow.svg) -->
-<h2 id="Event-对象的常见应用"><a href="#Event-对象的常见应用" class="headerlink" title="Event 对象的常见应用"></a>Event 对象的常见应用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() <span class="comment">// 阻止默认事件</span></span><br><span class="line">event.stopPropagation() <span class="comment">// 阻止事件冒泡</span></span><br><span class="line">event.stopImmediatePropagation() <span class="comment">// 事件响应优先级</span></span><br><span class="line">event.currentTarget <span class="comment">// 当前绑定的事件对象</span></span><br><span class="line">event.target</span><br></pre></td></tr></table></figure>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p><a href="https://www.cnblogs.com/LuckyWinty/p/5796190.html" target="_blank" rel="noopener">js 的观察者模式创建自定义事件</a></p>
-<ul>
-<li><p>Event()构造函数，创建一个新的事件对象 event</p>
 </li>
-<li><p>CustomEvent()创建一个自定义事件</p>
-</li>
-<li>document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建事件</span></span><br><span class="line"><span class="keyword">var</span> create = <span class="built_in">document</span>.createEvent(<span class="string">"Event"</span>)</span><br><span class="line"><span class="comment">// 定义事件名为'build'</span></span><br><span class="line">create.initEvent(<span class="string">"build"</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">element.addEventListener(<span class="string">"buiild"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target)</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br><span class="line"><span class="comment">// 出发对象可以是任何元素或者其他事件目标</span></span><br><span class="line">element.dispatchEvent(event)</span><br></pre></td></tr></table></figure>
-<h2 id="自定义事件封装"><a href="#自定义事件封装" class="headerlink" title="自定义事件封装"></a><code>自定义事件封装</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">// a : While a window.CustomEvent object exists, it cannot be called as a constructor.</span></span><br><span class="line">        <span class="comment">// b : There is no window.CustomEvent object</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">window</span>.CustomEvent(<span class="string">'T'</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        <span class="keyword">var</span> CustomEvent = <span class="function"><span class="keyword">function</span>(<span class="params">event, params</span>)</span>&#123;</span><br><span class="line">            params = params || &#123; <span class="attr">bubbles</span>: <span class="literal">false</span>, <span class="attr">cancelable</span>: <span class="literal">false</span>, <span class="attr">detail</span>: <span class="literal">undefined</span> &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> evt = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span><br><span class="line"></span><br><span class="line">            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> evt;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        CustomEvent.prototype = <span class="built_in">window</span>.Event.prototype;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">window</span>.CustomEvent = CustomEvent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>, ...[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>);    <span class="comment">// 1,2,3,4,5</span></span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(<span class="string">'all'</span>)]   <span class="comment">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>扩展运算符主要是结合普通函数使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通函数一起使用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a, b, c, d, e</span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> args = [<span class="number">0</span>, <span class="number">2</span>]</span><br><span class="line">fun(<span class="number">-1</span>, ...args, <span class="number">2</span>, ...[<span class="number">3</span>])</span><br><span class="line"><span class="comment">// 扩展运算符后面还可以放置表达式</span></span><br><span class="line">cosnt arr = [</span><br><span class="line">    ...(x &gt; <span class="number">0</span> ? [<span class="string">'x'</span>] : []), <span class="string">'y'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>替代函数的 apply 方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 是写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">x, y, z</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">fun.apply(<span class="literal">null</span>, args)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 的写法</span></span><br><span class="line"><span class="keyword">let</span> args = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">fun(...args)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>合并或者连接数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替push方法</span></span><br><span class="line">arr1.push(...arr2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替concat方法</span></span><br><span class="line">[...arr1, ...arr2]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>复制数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 将arr1复制给arr2</span></span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解构赋值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line"><span class="keyword">let</span> x = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">let</span> restArr = arr.slice(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">let</span> [x, ...restArr] = arr;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字符串转化成数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'Hello World'</span></span><br><span class="line"><span class="keyword">const</span> arr = [...str]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类数组转数组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nodeList = <span class="built_in">document</span>.querySelect(<span class="string">'div'</span>)</span><br><span class="line"><span class="keyword">let</span> nodeArr = [...nodeList]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 只可以将可以枚举的类数组对象转换成数组</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>map 和 Set 结构</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -1363,7 +1377,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-08-ES6...rest和三点扩展运算符/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-08-DOM Event (事件)/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zander">
@@ -1382,7 +1396,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="2019/01/08/2019-01-08-ES6...rest和三点扩展运算符/" itemprop="url">ES6‘...’rest和三点扩展运算符</a></h1>
+                <a class="post-title-link" href="2019/01/08/2019-01-08-DOM Event (事件)/" itemprop="url">DOM 事件详解</a></h1>
         
 
         <div class="post-meta">
@@ -1417,8 +1431,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -1456,45 +1470,31 @@
       
         
           
-            <h1 id="ES6-的-rest-参数和扩展运算符"><a href="#ES6-的-rest-参数和扩展运算符" class="headerlink" title="ES6 的 rest 参数和扩展运算符"></a>ES6 的 rest 参数和扩展运算符</h1><h2 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h2><ul>
-<li>含义<blockquote>
-<p>扩展运算符是三个点(…)，它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列</p>
+            <h1 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>DOM 使 JavaScript 有能力怼 HTML 上的事件做出反应。<br><code>DOM事件的级别：</code></p>
 </blockquote>
+<ul>
+<li>DOM0 element.onclick = function(){}</li>
+<li>DOM2 element.addEventListener(“click”, function(){})</li>
+<li>DOM3 element.addEventListener(“keyup”, function(){})</li>
+</ul>
+<h2 id="DOM-事件模型"><a href="#DOM-事件模型" class="headerlink" title="DOM 事件模型"></a>DOM 事件模型</h2><blockquote>
+<p>DOM 事件模型分为两种，一类是 IE 的冒泡事件模型，另一类是 DOM 标准定义的冒泡型与捕获型的事件。</p>
+</blockquote>
+<h2 id="DOM-事件流"><a href="#DOM-事件流" class="headerlink" title="DOM 事件流"></a>DOM 事件流</h2><p>事件流： window -&gt; 捕获 -&gt; 目标阶段 -&gt; 冒泡 -&gt; window</p>
+<h2 id="描述-DOM-事件捕获的具体流程"><a href="#描述-DOM-事件捕获的具体流程" class="headerlink" title="描述 DOM 事件捕获的具体流程"></a>描述 DOM 事件捕获的具体流程</h2><img src="/public/images/eventflow.svg">
+<!-- ![DOM事件流](../assets/images/eventflow.svg) -->
+<h2 id="Event-对象的常见应用"><a href="#Event-对象的常见应用" class="headerlink" title="Event 对象的常见应用"></a>Event 对象的常见应用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() <span class="comment">// 阻止默认事件</span></span><br><span class="line">event.stopPropagation() <span class="comment">// 阻止事件冒泡</span></span><br><span class="line">event.stopImmediatePropagation() <span class="comment">// 事件响应优先级</span></span><br><span class="line">event.currentTarget <span class="comment">// 当前绑定的事件对象</span></span><br><span class="line">event.target</span><br></pre></td></tr></table></figure>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p><a href="https://www.cnblogs.com/LuckyWinty/p/5796190.html" target="_blank" rel="noopener">js 的观察者模式创建自定义事件</a></p>
+<ul>
+<li><p>Event()构造函数，创建一个新的事件对象 event</p>
 </li>
+<li><p>CustomEvent()创建一个自定义事件</p>
+</li>
+<li>document.CreateEvent()创建一个新的事件对象 event，随之必须调用自身的 init 方法进行初始化</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>, ...[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>);    <span class="comment">// 1,2,3,4,5</span></span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(<span class="string">'all'</span>)]   <span class="comment">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>扩展运算符主要是结合普通函数使用</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通函数一起使用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a, b, c, d, e</span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> args = [<span class="number">0</span>, <span class="number">2</span>]</span><br><span class="line">fun(<span class="number">-1</span>, ...args, <span class="number">2</span>, ...[<span class="number">3</span>])</span><br><span class="line"><span class="comment">// 扩展运算符后面还可以放置表达式</span></span><br><span class="line">cosnt arr = [</span><br><span class="line">    ...(x &gt; <span class="number">0</span> ? [<span class="string">'x'</span>] : []), <span class="string">'y'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>替代函数的 apply 方法</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 是写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">x, y, z</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">fun.apply(<span class="literal">null</span>, args)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 的写法</span></span><br><span class="line"><span class="keyword">let</span> args = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">fun(...args)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>合并或者连接数组</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替push方法</span></span><br><span class="line">arr1.push(...arr2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代替concat方法</span></span><br><span class="line">[...arr1, ...arr2]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>复制数组</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// 将arr1复制给arr2</span></span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1];</span><br></pre></td></tr></table></figure>
-<ul>
-<li>解构赋值</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line"><span class="keyword">let</span> x = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">let</span> restArr = arr.slice(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">let</span> [x, ...restArr] = arr;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>字符串转化成数组</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'Hello World'</span></span><br><span class="line"><span class="keyword">const</span> arr = [...str]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>类数组转数组</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nodeList = <span class="built_in">document</span>.querySelect(<span class="string">'div'</span>)</span><br><span class="line"><span class="keyword">let</span> nodeArr = [...nodeList]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 只可以将可以枚举的类数组对象转换成数组</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>map 和 Set 结构</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建事件</span></span><br><span class="line"><span class="keyword">var</span> create = <span class="built_in">document</span>.createEvent(<span class="string">"Event"</span>)</span><br><span class="line"><span class="comment">// 定义事件名为'build'</span></span><br><span class="line">create.initEvent(<span class="string">"build"</span>, <span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">element.addEventListener(<span class="string">"buiild"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target)</span><br><span class="line">&#125;, <span class="literal">false</span>)</span><br><span class="line"><span class="comment">// 出发对象可以是任何元素或者其他事件目标</span></span><br><span class="line">element.dispatchEvent(event)</span><br></pre></td></tr></table></figure>
+<h2 id="自定义事件封装"><a href="#自定义事件封装" class="headerlink" title="自定义事件封装"></a><code>自定义事件封装</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">// a : While a window.CustomEvent object exists, it cannot be called as a constructor.</span></span><br><span class="line">        <span class="comment">// b : There is no window.CustomEvent object</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">window</span>.CustomEvent(<span class="string">'T'</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        <span class="keyword">var</span> CustomEvent = <span class="function"><span class="keyword">function</span>(<span class="params">event, params</span>)</span>&#123;</span><br><span class="line">            params = params || &#123; <span class="attr">bubbles</span>: <span class="literal">false</span>, <span class="attr">cancelable</span>: <span class="literal">false</span>, <span class="attr">detail</span>: <span class="literal">undefined</span> &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> evt = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span><br><span class="line"></span><br><span class="line">            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> evt;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        CustomEvent.prototype = <span class="built_in">window</span>.Event.prototype;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">window</span>.CustomEvent = CustomEvent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
           
         
