@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目 12   如果在字符串的左引号前添加$，则可以在大括号之间的字符串内包括变量 1Console.WriteLine($&amp;quot;i am &amp;#123;name&amp;#125;&amp;quot;);   字符串去除两端空格   12345// 字符去">
+<meta name="description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目  12">
 <meta name="keywords" content="C#,ashx,restful,api">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c# asp.net之ashx写webRestful接口">
 <meta property="og:url" content="http://yoursite.com/2019/06/04/2019-06-04-c# asp.net之ashx写webRestful接口/index.html">
 <meta property="og:site_name" content="itwebbers">
-<meta property="og:description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目 12   如果在字符串的左引号前添加$，则可以在大括号之间的字符串内包括变量 1Console.WriteLine($&amp;quot;i am &amp;#123;name&amp;#125;&amp;quot;);   字符串去除两端空格   12345// 字符去">
+<meta property="og:description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目  12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-04T03:25:26.673Z">
+<meta property="og:updated_time" content="2019-06-04T05:16:47.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c# asp.net之ashx写webRestful接口">
-<meta name="twitter:description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目 12   如果在字符串的左引号前添加$，则可以在大括号之间的字符串内包括变量 1Console.WriteLine($&amp;quot;i am &amp;#123;name&amp;#125;&amp;quot;);   字符串去除两端空格   12345// 字符去">
+<meta name="twitter:description" content="c# asp.net之ashx写webRestful接口使用vs2019创建项目 打开vs2019，点击顶部tabs 文件 –&amp;gt; 新建 –&amp;gt; 项目  12">
 
 
 
@@ -376,30 +376,8 @@
       
         <h1 id="c-asp-net之ashx写webRestful接口"><a href="#c-asp-net之ashx写webRestful接口" class="headerlink" title="c# asp.net之ashx写webRestful接口"></a>c# asp.net之ashx写webRestful接口</h1><h3 id="使用vs2019创建项目"><a href="#使用vs2019创建项目" class="headerlink" title="使用vs2019创建项目"></a>使用vs2019创建项目</h3><ol>
 <li>打开vs2019，点击顶部tabs 文件 –&gt; 新建 –&gt; 项目</li>
-<li><p>12 </p>
-<blockquote>
-<p>如果在字符串的左引号前添加<code>$</code>，则可以在大括号之间的字符串内包括变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine($&quot;i am &#123;name&#125;&quot;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>字符串去除两端空格</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 字符去除两端空格</span><br><span class="line">//name = name.Trim();</span><br><span class="line">//name = name.TrimStart();</span><br><span class="line">name = name.TrimEnd();</span><br><span class="line">Console.WriteLine($&quot;[&#123;name&#125;&quot;;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><p>替换字符串的字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = &quot;all is well&quot;;</span><br><span class="line">str = str.Replace(&quot;is&quot;, &quot;was&quot;);</span><br><span class="line">Console.WriteLine(str);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查找字符串文本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 查找字符串中的文本</span><br><span class="line">string str = &quot;zander&quot;;</span><br><span class="line">Console.WriteLin(str.Contains(&quot;a&quot;));</span><br><span class="line"></span><br><span class="line">// 在字符串开始和结束搜索字符</span><br><span class="line">string str = &quot;You say goodbye, and I say hello&quot;;</span><br><span class="line">Console.WriteLine(str.StartsWith(&quot;You&quot;));</span><br><span class="line">Console.WriteLine(str.StartsWith(&quot;and&quot;));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>比较字符串</p>
-</li>
-<li>修改字符串内容</li>
-<li>确定字符串是否表示数字</li>
-<li>分隔字符串</li>
-<li>将多个字符串合并成一个字符串</li>
-<li>在字符串中搜索文本</li>
+<li></li>
+<li>12 </li>
 </ol>
 
       
@@ -446,6 +424,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="../test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -524,7 +506,7 @@
               
                 <a href="../../../../archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
