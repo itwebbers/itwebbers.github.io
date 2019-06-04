@@ -454,6 +454,150 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/05/07/2019-05-07-c#-程序结构/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="2019/05/07/2019-05-07-c#-程序结构/" itemprop="url">C#程序结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T22:09:00+08:00">
+                2019-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="C-程序结构"><a href="#C-程序结构" class="headerlink" title="C#程序结构"></a>C#程序结构</h1><ol>
+<li>C#中的程序结构包括：程序，命名空间，类型，成员，程序集</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">namespace Acme.Collections</span><br><span class="line">&#123;</span><br><span class="line">    public class Stack</span><br><span class="line">    &#123;</span><br><span class="line">        Entry top;</span><br><span class="line">        public void Push(object data) </span><br><span class="line">        &#123;</span><br><span class="line">            top = new Entry(top, data);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public object Pop() </span><br><span class="line">        &#123;</span><br><span class="line">            if (top == null)</span><br><span class="line">            &#123;</span><br><span class="line">                throw new InvalidOperationException();</span><br><span class="line">            &#125;</span><br><span class="line">            object result = top.data;</span><br><span class="line">            top = top.next;</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        class Entry</span><br><span class="line">        &#123;</span><br><span class="line">            public Entry next;</span><br><span class="line">            public object data;</span><br><span class="line">            public Entry(Entry next, object data)</span><br><span class="line">            &#123;</span><br><span class="line">                this.next = next;</span><br><span class="line">                this.data = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/05/07/2019-05-08-c# 处理字符串/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -574,150 +718,6 @@
 <li>在字符串中搜索文本</li>
 </ol>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/05/07/2019-05-07-c#-程序结构/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zander">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="itwebbers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="2019/05/07/2019-05-07-c#-程序结构/" itemprop="url">C#程序结构</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T22:09:00+08:00">
-                2019-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="C-程序结构"><a href="#C-程序结构" class="headerlink" title="C#程序结构"></a>C#程序结构</h1><ol>
-<li>C#中的程序结构包括：程序，命名空间，类型，成员，程序集</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">namespace Acme.Collections</span><br><span class="line">&#123;</span><br><span class="line">    public class Stack</span><br><span class="line">    &#123;</span><br><span class="line">        Entry top;</span><br><span class="line">        public void Push(object data) </span><br><span class="line">        &#123;</span><br><span class="line">            top = new Entry(top, data);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public object Pop() </span><br><span class="line">        &#123;</span><br><span class="line">            if (top == null)</span><br><span class="line">            &#123;</span><br><span class="line">                throw new InvalidOperationException();</span><br><span class="line">            &#125;</span><br><span class="line">            object result = top.data;</span><br><span class="line">            top = top.next;</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        class Entry</span><br><span class="line">        &#123;</span><br><span class="line">            public Entry next;</span><br><span class="line">            public object data;</span><br><span class="line">            public Entry(Entry next, object data)</span><br><span class="line">            &#123;</span><br><span class="line">                this.next = next;</span><br><span class="line">                this.data = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1096,6 +1096,269 @@
   
   
 
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-09-sass中文文档/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zander">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="itwebbers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="2019/01/08/2019-01-09-sass中文文档/" itemprop="url">JavaScript 本地对象和内置对象 && Browser 对象 && HTML DOM 对象</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T00:00:00+08:00">
+                2019-01-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="sass-中文文档"><a href="#sass-中文文档" class="headerlink" title="sass 中文文档"></a>sass 中文文档</h1><blockquote>
+<p>sass css 预编译器，是由按强化 css 的工具。</p>
+</blockquote>
+<h2 id="sass-特点"><a href="#sass-特点" class="headerlink" title="sass 特点"></a>sass 特点</h2><ol>
+<li>完美兼容 css3</li>
+<li>在 css 基础上增加了<code>变量</code>，<code>嵌套（nesting）</code>,<code>混合（mixins）</code>,<code>导入（import）</code>;</li>
+<li>通过函数进行颜色值与属性值的计算</li>
+<li>提供控制指令等高级功能</li>
+<li>自定义输出格式</li>
+</ol>
+<h2 id="css-功能扩展"><a href="#css-功能扩展" class="headerlink" title="css 功能扩展"></a>css 功能扩展</h2><ol>
+<li>嵌套规则<blockquote>
+<p>Sass 允许将一套 css 样式嵌套进另一套样式中，内层的样式将它外层的选择器作为父选择器</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  nav &#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 14<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>父选择器 &amp;</li>
+</ol>
+<blockquote>
+<p>用<code>&amp;</code>代表嵌套规则外层的父选择器</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>属性嵌套</li>
+</ol>
+<blockquote>
+<p>为了方便管理复杂的属性，同时也为了避免重复的输入，Sass 允许将属性嵌套在命名空间中</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.funky</span> &#123;</span><br><span class="line">  font &#123;</span><br><span class="line">    <span class="selector-tag">family</span>: <span class="selector-tag">fantasy</span>;</span><br><span class="line">    <span class="selector-tag">size</span>: 15<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>注释： <code>/* */</code> 与 <code>//</code><blockquote>
+<p>Sass 支持标准的 css 多行注释<code>/* */</code>，以及单行注释 <code>//</code>, 前者会被完整输出到编译后的 css 文件中，而后者则不会</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* This comment is</span></span><br><span class="line"><span class="comment"> * several lines long.</span></span><br><span class="line"><span class="comment"> * since it uses the CSS comment syntax,</span></span><br><span class="line"><span class="comment"> * it will appear in the CSS output. */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// These comments are only one line long each.</span><br><span class="line">// They won't appear in the CSS output,</span><br><span class="line">// since they use the single-line comment syntax.</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="SassScript"><a href="#SassScript" class="headerlink" title="SassScript"></a>SassScript</h2><ol>
+<li>变量 <code>$</code> (Variable: \$)<blockquote>
+<p>SassScript 最普遍的用法就是变量，变量以美元符号开头，赋值方法与 css 属性的写法一样</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 变量声明</span><br><span class="line">$width: 100px;</span><br><span class="line"></span><br><span class="line">// 调用方式</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: $width;</span><br><span class="line">&#125;</span><br><span class="line">// 将局部变量转换为全局变量可以在其后添加 !global</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  $width: 100px !global;</span><br><span class="line">  width: $width;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>数据类型</p>
+<blockquote>
+<p>SassScript 支持 6 中主要的数据类型</p>
+</blockquote>
+<ul>
+<li>数字</li>
+<li>字符串</li>
+<li>颜色</li>
+<li>布尔值 true/false</li>
+<li>空值，null</li>
+<li>数组</li>
+<li><p>maps</p>
+<p>2.1 字符串</p>
+<blockquote>
+<p>有引号字符串和无引号字符串；使用字符串变量的方式： <code>#{}</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>运算</p>
+<blockquote>
+<p>所有数据类型均支持相等运算 == 或 !=，此外，每种数据类型也有其各自支持的运算方式。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>数字运算<blockquote>
+<p>SassScript 支持数字的加减乘除、取整等运算 (+, -, *, /, %)，如果必要会在不同单位间转换值</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  font: 10px/8px; // Plain CSS, no division</span><br><span class="line">  $width: 1000px;</span><br><span class="line">  width: $width/2; // Uses a variable, does division</span><br><span class="line">  width: round(1.5) / 2; // Uses a function, does division</span><br><span class="line">  height: (500px/2); // Uses parentheses, does division</span><br><span class="line">  margin-left: 5px + 8px/2px; // Uses +, does division</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>圆括号用来影响运算的顺序</li>
+</ul>
+<ol start="4">
+<li>函数指令</li>
+</ol>
+<blockquote>
+<p>Sass 支持自定义函数，并能在任何属性值或 Sass script 中使用：</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$grid-width: 40px;</span><br><span class="line">$gutter-width: 10px;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">function</span> grid-width($n) &#123;</span><br><span class="line">  @<span class="keyword">return</span> $n * $grid-width + ($n - <span class="number">1</span>) * $gutter-width;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">grid-width</span>(5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Rules-与指令-Rules-and-Directives"><a href="#Rules-与指令-Rules-and-Directives" class="headerlink" title="@-Rules 与指令 (@-Rules and Directives)"></a>@-Rules 与指令 (@-Rules and Directives)</h2><ol>
+<li><p>@import</p>
+<blockquote>
+<p>Sass 拓展了@import 的功能，允许其导入 SCSS 或 SaSS 文件。被导入的文件将合并编译到同一个 css 文件中，另外，被导入的文件中所包含的变量或者混合指令（mixin）都可以在导入的文件中使用。</p>
+</blockquote>
+<ul>
+<li>嵌套@import</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 假设 example.scss 文件包含以下样式：</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.example</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">// 然后导入到 #main 样式内</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">  @import 'example';</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@media</p>
+</li>
+<li><p>@extend</p>
+<blockquote>
+<p>在设计网页的时候常常遇到这种情况：一个元素使用的样式与另一个元素完全相同，但又添加了额外的样式。通常会在 HTML 中给元素定义两个 class，一个通用样式，一个特殊样式</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.seriousError</span> &#123;</span><br><span class="line">  @extend .error;</span><br><span class="line">  <span class="selector-tag">border-width</span>: 3<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="混合指令（Mixin-Directives）"><a href="#混合指令（Mixin-Directives）" class="headerlink" title="混合指令（Mixin Directives）"></a>混合指令（Mixin Directives）</h2><blockquote>
+<p>混合指令（Mixin）用于定义可重复使用的样式，避免了使用无意的 class，比如.float-left。混合指令可以包含所有的 css 规则，绝大部分 Sass 规则，甚至通过参数功能引入变量，输出多样化的样式。</p>
+</blockquote>
+<ul>
+<li>定义混合指令 @mixin (Defining a Mixin: @mixin)</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> clearfix &#123;</span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'.'</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">  * <span class="selector-tag">html</span> &amp; &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>使用 Mixin 样式： <code>@include</code></p>
+<blockquote>
+<p>使用<code>@include</code>之快令引入混合样式，格式是在其后添加混合名称</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page-title</span> &#123;</span><br><span class="line">  @include clearfix;</span><br><span class="line">  <span class="selector-tag">padding</span>: 4<span class="selector-tag">px</span>;</span><br><span class="line">  <span class="selector-tag">margin-top</span>: 10<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1406,269 +1669,6 @@
 <li>Attribute</li>
 <li>Event</li>
 </ol>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com2019/01/08/2019-01-09-sass中文文档/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zander">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="itwebbers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="2019/01/08/2019-01-09-sass中文文档/" itemprop="url">JavaScript 本地对象和内置对象 && Browser 对象 && HTML DOM 对象</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T00:00:00+08:00">
-                2019-01-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="sass-中文文档"><a href="#sass-中文文档" class="headerlink" title="sass 中文文档"></a>sass 中文文档</h1><blockquote>
-<p>sass css 预编译器，是由按强化 css 的工具。</p>
-</blockquote>
-<h2 id="sass-特点"><a href="#sass-特点" class="headerlink" title="sass 特点"></a>sass 特点</h2><ol>
-<li>完美兼容 css3</li>
-<li>在 css 基础上增加了<code>变量</code>，<code>嵌套（nesting）</code>,<code>混合（mixins）</code>,<code>导入（import）</code>;</li>
-<li>通过函数进行颜色值与属性值的计算</li>
-<li>提供控制指令等高级功能</li>
-<li>自定义输出格式</li>
-</ol>
-<h2 id="css-功能扩展"><a href="#css-功能扩展" class="headerlink" title="css 功能扩展"></a>css 功能扩展</h2><ol>
-<li>嵌套规则<blockquote>
-<p>Sass 允许将一套 css 样式嵌套进另一套样式中，内层的样式将它外层的选择器作为父选择器</p>
-</blockquote>
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  nav &#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 14<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>父选择器 &amp;</li>
-</ol>
-<blockquote>
-<p>用<code>&amp;</code>代表嵌套规则外层的父选择器</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>属性嵌套</li>
-</ol>
-<blockquote>
-<p>为了方便管理复杂的属性，同时也为了避免重复的输入，Sass 允许将属性嵌套在命名空间中</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.funky</span> &#123;</span><br><span class="line">  font &#123;</span><br><span class="line">    <span class="selector-tag">family</span>: <span class="selector-tag">fantasy</span>;</span><br><span class="line">    <span class="selector-tag">size</span>: 15<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>注释： <code>/* */</code> 与 <code>//</code><blockquote>
-<p>Sass 支持标准的 css 多行注释<code>/* */</code>，以及单行注释 <code>//</code>, 前者会被完整输出到编译后的 css 文件中，而后者则不会</p>
-</blockquote>
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* This comment is</span></span><br><span class="line"><span class="comment"> * several lines long.</span></span><br><span class="line"><span class="comment"> * since it uses the CSS comment syntax,</span></span><br><span class="line"><span class="comment"> * it will appear in the CSS output. */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// These comments are only one line long each.</span><br><span class="line">// They won't appear in the CSS output,</span><br><span class="line">// since they use the single-line comment syntax.</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="SassScript"><a href="#SassScript" class="headerlink" title="SassScript"></a>SassScript</h2><ol>
-<li>变量 <code>$</code> (Variable: \$)<blockquote>
-<p>SassScript 最普遍的用法就是变量，变量以美元符号开头，赋值方法与 css 属性的写法一样</p>
-</blockquote>
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 变量声明</span><br><span class="line">$width: 100px;</span><br><span class="line"></span><br><span class="line">// 调用方式</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: $width;</span><br><span class="line">&#125;</span><br><span class="line">// 将局部变量转换为全局变量可以在其后添加 !global</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  $width: 100px !global;</span><br><span class="line">  width: $width;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>数据类型</p>
-<blockquote>
-<p>SassScript 支持 6 中主要的数据类型</p>
-</blockquote>
-<ul>
-<li>数字</li>
-<li>字符串</li>
-<li>颜色</li>
-<li>布尔值 true/false</li>
-<li>空值，null</li>
-<li>数组</li>
-<li><p>maps</p>
-<p>2.1 字符串</p>
-<blockquote>
-<p>有引号字符串和无引号字符串；使用字符串变量的方式： <code>#{}</code></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>运算</p>
-<blockquote>
-<p>所有数据类型均支持相等运算 == 或 !=，此外，每种数据类型也有其各自支持的运算方式。</p>
-</blockquote>
-</li>
-</ol>
-<ul>
-<li>数字运算<blockquote>
-<p>SassScript 支持数字的加减乘除、取整等运算 (+, -, *, /, %)，如果必要会在不同单位间转换值</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  font: 10px/8px; // Plain CSS, no division</span><br><span class="line">  $width: 1000px;</span><br><span class="line">  width: $width/2; // Uses a variable, does division</span><br><span class="line">  width: round(1.5) / 2; // Uses a function, does division</span><br><span class="line">  height: (500px/2); // Uses parentheses, does division</span><br><span class="line">  margin-left: 5px + 8px/2px; // Uses +, does division</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>圆括号用来影响运算的顺序</li>
-</ul>
-<ol start="4">
-<li>函数指令</li>
-</ol>
-<blockquote>
-<p>Sass 支持自定义函数，并能在任何属性值或 Sass script 中使用：</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$grid-width: 40px;</span><br><span class="line">$gutter-width: 10px;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">function</span> grid-width($n) &#123;</span><br><span class="line">  @<span class="keyword">return</span> $n * $grid-width + ($n - <span class="number">1</span>) * $gutter-width;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">grid-width</span>(5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Rules-与指令-Rules-and-Directives"><a href="#Rules-与指令-Rules-and-Directives" class="headerlink" title="@-Rules 与指令 (@-Rules and Directives)"></a>@-Rules 与指令 (@-Rules and Directives)</h2><ol>
-<li><p>@import</p>
-<blockquote>
-<p>Sass 拓展了@import 的功能，允许其导入 SCSS 或 SaSS 文件。被导入的文件将合并编译到同一个 css 文件中，另外，被导入的文件中所包含的变量或者混合指令（mixin）都可以在导入的文件中使用。</p>
-</blockquote>
-<ul>
-<li>嵌套@import</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 假设 example.scss 文件包含以下样式：</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.example</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">// 然后导入到 #main 样式内</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">  @import 'example';</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>@media</p>
-</li>
-<li><p>@extend</p>
-<blockquote>
-<p>在设计网页的时候常常遇到这种情况：一个元素使用的样式与另一个元素完全相同，但又添加了额外的样式。通常会在 HTML 中给元素定义两个 class，一个通用样式，一个特殊样式</p>
-</blockquote>
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.seriousError</span> &#123;</span><br><span class="line">  @extend .error;</span><br><span class="line">  <span class="selector-tag">border-width</span>: 3<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="混合指令（Mixin-Directives）"><a href="#混合指令（Mixin-Directives）" class="headerlink" title="混合指令（Mixin Directives）"></a>混合指令（Mixin Directives）</h2><blockquote>
-<p>混合指令（Mixin）用于定义可重复使用的样式，避免了使用无意的 class，比如.float-left。混合指令可以包含所有的 css 规则，绝大部分 Sass 规则，甚至通过参数功能引入变量，输出多样化的样式。</p>
-</blockquote>
-<ul>
-<li>定义混合指令 @mixin (Defining a Mixin: @mixin)</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> clearfix &#123;</span><br><span class="line">  <span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'.'</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">  * <span class="selector-tag">html</span> &amp; &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>使用 Mixin 样式： <code>@include</code></p>
-<blockquote>
-<p>使用<code>@include</code>之快令引入混合样式，格式是在其后添加混合名称</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page-title</span> &#123;</span><br><span class="line">  @include clearfix;</span><br><span class="line">  <span class="selector-tag">padding</span>: 4<span class="selector-tag">px</span>;</span><br><span class="line">  <span class="selector-tag">margin-top</span>: 10<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
